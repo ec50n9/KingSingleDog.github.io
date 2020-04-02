@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsingledog.github.io/</id>
     <title>Shello World</title>
-    <updated>2020-04-02T00:58:59.996Z</updated>
+    <updated>2020-04-02T01:11:13.341Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsingledog.github.io/"/>
     <link rel="self" href="https://kingsingledog.github.io/atom.xml"/>
@@ -10,6 +10,20 @@
     <logo>https://kingsingledog.github.io/images/avatar.png</logo>
     <icon>https://kingsingledog.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Shello World</rights>
+    <entry>
+        <title type="html"><![CDATA[敲简单的正则表达式教程]]></title>
+        <id>https://kingsingledog.github.io/post/qiao-jian-dan-de-zheng-ze-biao-da-shi-jiao-cheng/</id>
+        <link href="https://kingsingledog.github.io/post/qiao-jian-dan-de-zheng-ze-biao-da-shi-jiao-cheng/">
+        </link>
+        <updated>2020-04-02T01:02:15.000Z</updated>
+        <content type="html"><![CDATA[<p>##🤔正则表达式是啥？<br>
+##📑语法<br>
+##💊元字符<br>
+##⏳运算符的优先级<br>
+##📋匹配规则<br>
+##🛠正则表达式测试工具</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[杂函]]></title>
         <id>https://kingsingledog.github.io/post/za-han/</id>
