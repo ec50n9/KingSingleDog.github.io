@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>敲简单的正则表达式教程 | Shello World</title>
-<link rel="shortcut icon" href="https://kingsingledog.github.io//favicon.ico?v=1585796159933">
+<link rel="shortcut icon" href="https://kingsingledog.github.io//favicon.ico?v=1585803534169">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://kingsingledog.github.io//styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="敲简单的正则表达式教程 | Shello World - Atom Feed" href="https://kingsingledog.github.io//atom.xml">
@@ -16,9 +16,9 @@
 
 📜简介
 🤔 正则表达式是啥？
-正则表达式是一种拿来匹配文字的脚本。
-🙄 它有什么用呢？
-比如你在编辑一个文本文件的时候，如果你需要搜索文本里面某一个特定的字符串的时候你可能会点击菜单中的搜索按钮来..." />
+正则表达式是一种拿来匹配文字的规则。
+🙄 它有啥用？
+比如你在编辑一段文字的时候，如果你需要搜索文字内容里面某一个特定的字符串的时候你可能会点击菜单中的搜索按钮来搜索..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -28,7 +28,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://kingsingledog.github.io/">
-  <img class="avatar" src="https://kingsingledog.github.io//images/avatar.png?v=1585796159933" alt="">
+  <img class="avatar" src="https://kingsingledog.github.io//images/avatar.png?v=1585803534169" alt="">
   </a>
   <h1 class="site-title">
     Shello World
@@ -100,7 +100,7 @@
                 2020-04-02
               </span>
               <span>
-                2 min read
+                3 min read
               </span>
               
             </div>
@@ -112,15 +112,25 @@
 </blockquote>
 <h2 id="简介">📜简介</h2>
 <h3 id="正则表达式是啥">🤔 正则表达式是啥？</h3>
-<p>正则表达式是一种拿来匹配文字的脚本。</p>
-<h3 id="它有什么用呢">🙄 它有什么用呢？</h3>
-<p>比如你在编辑一个文本文件的时候，如果你需要搜索文本里面某一个特定的字符串的时候你可能会点击菜单中的搜索按钮来搜索那个字符串。然而这种操作并非屡试不爽，有时候你会遇到这种情况：文本内包含有很多有规律的字符串，比如“第一章”、“第二章”、“第三章”这种，而且这样的字符串在文本里面还有很多，你总不能一个个的搜索并删掉吧，因为这实在太考验人的耐性了。这个时候，一个叫做正则表达式的工具可以让你的搜索变得事半功倍。像上面这种情况你只需要在搜索框中输入：</p>
+<p>正则表达式是一种拿来匹配文字的规则。</p>
+<h3 id="它有啥用">🙄 它有啥用？</h3>
+<p>比如你在编辑一段文字的时候，如果你需要搜索文字内容里面某一个特定的字符串的时候你可能会点击菜单中的搜索按钮来搜索那个字符串。然而这种操作并非屡试不爽，有时你会遇到这种情况：文本内包含有很多有规律的字符串，比如“第一章”、“第二章”、“第三章”这种，而且这样的字符串在文本里面还有很多，你总不能一个个的搜索并删掉吧，因为这实在太考验人的耐性了。这个时候，一个叫做正则表达式的工具可以让你的搜索变得事半功倍。像上面这种情况你只需要在搜索框中输入：</p>
 <pre><code>第.+?章
 </code></pre>
-<p>就可以匹配到全部类似于“第？章”的字符串了！<br>
-很香有木有？🍚 那么下面就来了介绍一下它的食用方法了！🍴</p>
+<p>就可以匹配到全部类似于“第__章”的字符串了！<br>
+很香🍚有木有？ 下面就来介绍一下它的食用方法了！🍴</p>
 <h2 id="食用方法">🍣 食用方法</h2>
 <h3 id="语法">📑 语法</h3>
+<p>和平时的文字一样，正则表达式是一种可以保留一些未知量的字符串，也就是一种规则，正则匹配就是找到符合这一规则的文本，我先举个栗子🌰：</p>
+<blockquote>
+<p>假如你的朋友发了你一份富婆通讯录，求着你要你把里面的号码全部提取出来放到一个文本文件里面。你看了一眼那个富婆通讯录，哇，单是西城区的就有好几百个了，这是人能干的事情？！</p>
+</blockquote>
+<p>这确实不是人干的哈哈，不过抱怨过后你或许会灵光一现：我现在要的是全部电话号码，电话号码就一串数字，和文件里面的其他文字还是有很大区别的，那会不会有那么一个程序是可以把文本中的数字全部提取出来呢？于是你抱着这种想法去找了度娘，然后你了解到了一种叫做正则表达式的东西，并发现了这样一个据说可以获取到文本里面全部号码的表达式：</p>
+<pre><code>^[0-9]*$
+</code></pre>
+<p>是不是感觉这行字符像是脸在键盘上蹭出来的一样，它是啥意思咧？<br>
+不慌，先来看第一个符号<code>^</code>，它代表着你要匹配的这个字符串是以这个符号后面的东西开头的，也就是后面的那个<code>[0-9]</code>，<code>[0-9]</code>的意思是从0到9的十个数字中任意一个，因为电话号码就是是十几个数字拼起来的嘛，再来看下一个符号<code>*</code>，这是特殊字符，意思是它前面的东西<code>[0-9]</code>可以有0到无限个，最后的<code>$</code>是和<code>^</code>相对的，意味着这个字符的结尾也是一个0到9的数字。<br>
+整一段翻译成人话就是：匹配一个以0到9的数字开头和结尾的并且中间也有不知道多少个数字的的字符串</p>
 <h3 id="元字符">💊 元字符</h3>
 <h3 id="运算符的优先级">⏳ 运算符的优先级</h3>
 <h3 id="匹配规则">📋 匹配规则</h3>
@@ -135,7 +145,7 @@
 <li><a href="#%E7%AE%80%E4%BB%8B">📜简介</a>
 <ul>
 <li><a href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%98%AF%E5%95%A5">🤔 正则表达式是啥？</a></li>
-<li><a href="#%E5%AE%83%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8%E5%91%A2">🙄 它有什么用呢？</a></li>
+<li><a href="#%E5%AE%83%E6%9C%89%E5%95%A5%E7%94%A8">🙄 它有啥用？</a></li>
 </ul>
 </li>
 <li><a href="#%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95">🍣 食用方法</a>
