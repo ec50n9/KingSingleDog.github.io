@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://kingsingledog.github.io/</id>
+    <title>Gridea</title>
+    <updated>2020-04-02T00:11:41.619Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://kingsingledog.github.io/"/>
+    <link rel="self" href="https://kingsingledog.github.io/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://kingsingledog.github.io/images/avatar.png</logo>
+    <icon>https://kingsingledog.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[杂函]]></title>
+        <id>https://kingsingledog.github.io/post/za-han/</id>
+        <link href="https://kingsingledog.github.io/post/za-han/">
+        </link>
+        <updated>2020-04-02T00:05:46.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="win10-关闭开机启动项">win10 关闭开机启动项</h3>
+<p>步骤如下：</p>
+<ol>
+<li>打开任务管理器</li>
+<li>切换到“启动”选项卡</li>
+<li>右键需要禁用的任务进行具体操作</li>
+</ol>
+<h3 id="win10-快捷键">win10 快捷键</h3>
+<ul>
+<li>快捷菜单：<strong>Win + X</strong></li>
+<li>剪切板：<strong>Win + V</strong></li>
+<li>截图：<strong>Win + Shift + S</strong></li>
+<li>表情和特殊符号：<strong>Ctrl + Shift + B</strong></li>
+<li>打开“此电脑”：<strong>Win + E</strong></li>
+</ul>
+<h3 id="pip-更换下载源">pip 更换下载源</h3>
+<pre><code>$ pip install pqi #安装 pqi
+$ pqi ls # 显示全部源
+$ pqi use aliyuan # 使用源
+</code></pre>
+<p>来自：<a href="https://jingyan.baidu.com/article/455a995067da61a16727785a.html">pip下载Python扩展包时如何提高下载速度</a></p>
+<h3 id="网页在线工具万能命令">网页在线工具（万能命令）</h3>
+<p>在任意网址前面添加输入<code>wn.run/</code>，例如：<br>
+把<code>https://www.iqiyi.com/</code>编辑成<code>wn.run/https://www.iqiyi.com/</code><br>
+然后回车进入即可看见该网站能用的工具了。</p>
+<p>详细用法请参考：<a href="https://wanneng.run/cn/">万能命令</a></p>
+<h3 id="linux-登录问候语">Linux 登录问候语</h3>
+<pre><code>$ vi /etc/motd
+</code></pre>
+<p>来自：<a href="https://blog.csdn.net/rrlyrstar/article/details/79226190">Linux登录问候语</a></p>
+<h3 id="linux-开机启动脚本">Linux 开机启动脚本</h3>
+<p>系统启动后会自动执行<code>/etc/profile.d/</code>下的所有shell脚本，所以将写好的脚本（.sh文件）放到目录<code>/etc/profile.d/</code>下即可。</p>
+<p>来自：<a href="https://www.jb51.net/article/176257.htm">Linux 添加开机启动方法(服务/脚本)</a></p>
+<h3 id="excel的实用技巧">Excel的实用技巧</h3>
+<p>Office的软件往往大而全，学习成本非常大。有时候可以掌握一些小技巧，用一些巧劲让处理“更省事”，比较知名的比如 <strong>Ctrl+E</strong> 。它可以有点类似“重复上一步”的功能，绝大多数人眼可以观察出来的规律，它都可以做到：<br>
+比如，在某个内容后面加一个固定的东西了。你只需要手动改第一个，然后按 <strong>Ctrl+E</strong> ：</p>
+<figure data-type="image" tabindex="1"><a href="https://kingsingledog.github.io/2019/12/22/%E6%9D%82%E5%87%BD/v2-ec2c6362b6367a6e249d4b5ddc8e24e7_hd-1580638970576.webp"><img src="https://kingsingledog.github.io/2019/12/22/%E6%9D%82%E5%87%BD/v2-ec2c6362b6367a6e249d4b5ddc8e24e7_hd-1580638970576.webp" alt="图片" loading="lazy"></a></figure>
+<p>再比如说把一段完整的内容分割成几部分了（为防止随机数生成出真实手机号影响他人，均打码一位）：<strong>Ctrl+E！</strong></p>
+<figure data-type="image" tabindex="2"><a href="https://kingsingledog.github.io/2019/12/22/%E6%9D%82%E5%87%BD/v2-c3d8e024ed7e9968458652620bee0228_hd.webp"><img src="https://kingsingledog.github.io/2019/12/22/%E6%9D%82%E5%87%BD/v2-c3d8e024ed7e9968458652620bee0228_hd.webp" alt="图片" loading="lazy"></a></figure>
+<p>一键提取出某个部分，再与另外的内容组合：<strong>Ctrl+E！</strong></p>
+<figure data-type="image" tabindex="3"><a href="https://kingsingledog.github.io/2019/12/22/%E6%9D%82%E5%87%BD/v2-4b93bbed9c1297b5d15137efdb4356a9_hd-1580638996361.webp"><img src="https://kingsingledog.github.io/2019/12/22/%E6%9D%82%E5%87%BD/v2-4b93bbed9c1297b5d15137efdb4356a9_hd-1580638996361.webp" alt="图片" loading="lazy"></a></figure>
+<p>或者你想从一大段完整的信息中，提取出某个部分来：<strong>Ctrl+E！</strong></p>
+<figure data-type="image" tabindex="4"><a href="https://kingsingledog.github.io/2019/12/22/%E6%9D%82%E5%87%BD/v2-87c7721d6b4573ee72d3e74942e5352c_hd.webp"><img src="https://kingsingledog.github.io/2019/12/22/%E6%9D%82%E5%87%BD/v2-87c7721d6b4573ee72d3e74942e5352c_hd.webp" alt="图片" loading="lazy"></a></figure>
+<p>甚至将几部分的内容整合为一句完整的话：<strong>Ctrl+E！</strong></p>
+<figure data-type="image" tabindex="5"><a href="https://kingsingledog.github.io/2019/12/22/%E6%9D%82%E5%87%BD/v2-be57942a6923341734ac2588e00eb015_hd-1580639054373.webp"><img src="https://kingsingledog.github.io/2019/12/22/%E6%9D%82%E5%87%BD/v2-be57942a6923341734ac2588e00eb015_hd-1580639054373.webp" alt="图片" loading="lazy"></a></figure>
+<p>来自：<a href="https://www.zhihu.com/question/352321370/answer/989335660">知乎：作为一名在校大学生不会用电脑怎么办？ - 求学时 的回答</a></p>
+<h3 id="魔方还原机器人">魔方还原机器人</h3>
+<p>原理图：</p>
+<figure data-type="image" tabindex="6"><a href="https://kingsingledog.github.io/2019/12/22/%E6%9D%82%E5%87%BD/v2-263db94494223dccf2d334b842e8ad11_hd.jpg"><img src="https://kingsingledog.github.io/2019/12/22/%E6%9D%82%E5%87%BD/v2-263db94494223dccf2d334b842e8ad11_hd.jpg" alt="图片" loading="lazy"></a></figure>
+<p>来自：<a href="https://www.zhihu.com/question/23149991/answer/988550313">知乎：怎么能做出一台在 5 秒内解开魔方的机器人 ？</a></p>
+<h3 id="powershell-因为在此系统中禁止执行脚本的解决方法">PowerShell “因为在此系统中禁止执行脚本”的解决方法</h3>
+<p>在powershell中执行：</p>
+<pre><code>set-ExecutionPolicy RemoteSigned
+</code></pre>
+<p>更改执行策略，然后输入 <strong>Y</strong> 确认即可。</p>
+<p>来自：<a href="https://www.jb51.net/article/95022.htm">PowerShell因为在此系统中禁止执行脚本的解决方法</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello Gridea]]></title>
+        <id>https://kingsingledog.github.io/post/hello-gridea/</id>
+        <link href="https://kingsingledog.github.io/post/hello-gridea/">
+        </link>
+        <updated>2018-12-11T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+<!-- more -->
+<p><a href="https://github.com/getgridea/gridea">Github</a><br>
+<a href="https://gridea.dev/">Gridea 主页</a><br>
+<a href="http://fehey.com/">示例网站</a></p>
+<h2 id="特性">特性👇</h2>
+<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
+<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
+<p>🏷️  你可以对文章进行标签分组</p>
+<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
+<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
+<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
+<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
+<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
+<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
+<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
+<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
+<p>未来，它一定会成为你离不开的伙伴</p>
+<p>尽情发挥你的才华吧！</p>
+<p>😘 Enjoy~</p>
+]]></content>
+    </entry>
+</feed>
