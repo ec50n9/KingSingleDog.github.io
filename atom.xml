@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsingledog.github.io/</id>
     <title>Shello World</title>
-    <updated>2020-04-03T00:56:09.303Z</updated>
+    <updated>2020-04-03T01:10:33.659Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsingledog.github.io/"/>
     <link rel="self" href="https://kingsingledog.github.io/atom.xml"/>
@@ -31,7 +31,7 @@
 <h2 id="食用方法">🍣 食用方法</h2>
 <h3 id="语法">📑 语法</h3>
 <p>和平时的文字不同，正则表达式是一种可以保留一些未知量的字符串，也就是一种规则，正则匹配就是找到符合这一规则的文本，我先举个栗子🌰：</p>
-<p>如你所见，一条简单的正则表达式无非是由<code>普通字符</code>，<code>限定符</code>，<code>定位符</code>组成：</p>
+<p>如你所见，一条简单的正则表达式无非是由<code>普通字符</code>，<code>限定符</code>，<code>定位符</code>组成，以下是三者的基本概念：</p>
 <h4 id="限定符">限定符：</h4>
 <table>
 <thead>
@@ -67,8 +67,8 @@
 </tr>
 </tbody>
 </table>
-<p>如果你没看懂上表的话也没关系，在往下读之前，你只需了解有哪几个限定符就够了，下面我会为你介绍每一个的具体用法。<br>
-限定符，顾名思义就是拿来限定它前面的那个字符出现次数的，举个栗子🌰：</p>
+<p>如果你没看懂上表的话也没关系，在往下读之前，你只需了解有哪几个限定符就够了，下面我会为你介绍每一个的具体用法。</p>
+<p>限定符，顾名思义就是拿来限定它前面的那个字符出现次数的，举个栗子🌰：</p>
 <pre><code>1. runb
 2. runob
 3. runoob
