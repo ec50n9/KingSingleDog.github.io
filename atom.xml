@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsingledog.github.io/</id>
     <title>Shello World</title>
-    <updated>2020-04-03T01:10:33.659Z</updated>
+    <updated>2020-04-03T03:59:37.896Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsingledog.github.io/"/>
     <link rel="self" href="https://kingsingledog.github.io/atom.xml"/>
@@ -29,10 +29,54 @@
 <p>就可以匹配到全部类似于“第__章”的字符串了！<br>
 很香🍚有木有？ 下面就来介绍一下它的食用方法了！🍴</p>
 <h2 id="食用方法">🍣 食用方法</h2>
-<h3 id="语法">📑 语法</h3>
 <p>和平时的文字不同，正则表达式是一种可以保留一些未知量的字符串，也就是一种规则，正则匹配就是找到符合这一规则的文本，我先举个栗子🌰：</p>
 <p>如你所见，一条简单的正则表达式无非是由<code>普通字符</code>，<code>限定符</code>，<code>定位符</code>组成，以下是三者的基本概念：</p>
-<h4 id="限定符">限定符：</h4>
+<h3 id="普通字符">普通字符：</h3>
+<p>何为普通字符？在表达式<code>第.+?章</code>里面，<code>第</code>、<code>章</code>这类直接匹配的字符我们就称之为普通字符，而像<code>.</code>、<code>+</code>、<code>?</code>这类用来描述规则的有特殊含义的字符就是特殊字符了。但是如果我们要匹配一个和特殊字符一样的普通字符呢，比如我们要匹配一条数学式子<code>1+1=2</code>，这里就包含有<code>+</code>，而它在这里仅仅是一个普通字符，所以我们在写表达式的时候可以使用转义符<code>\</code>来使特殊字符转义成普通字符，即<code>\+</code>就代表了一个形为<code>+</code>的普通字符。</p>
+<p>除此之外，如果我们要匹配一些类似与回车或者空格之类的非打印字符怎么办？这里是一个关于非打印字符的表格，你可以使用下列的字符来取代回车和空格之类的非打印字符！</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">字符</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">\cx</td>
+<td style="text-align:left">匹配由x指明的控制字符。例如， \cM 匹配一个 Control-M 或回车符。x 的值必须为 A-Z 或 a-z 之一。否则，将 c 视为一个原义的 'c' 字符。</td>
+</tr>
+<tr>
+<td style="text-align:left">\f</td>
+<td style="text-align:left">匹配一个换页符。等价于 \x0c 和 \cL。</td>
+</tr>
+<tr>
+<td style="text-align:left">\n</td>
+<td style="text-align:left">匹配一个换行符。等价于 \x0a 和 \cJ。</td>
+</tr>
+<tr>
+<td style="text-align:left">\r</td>
+<td style="text-align:left">匹配一个回车符。等价于 \x0d 和 \cM。</td>
+</tr>
+<tr>
+<td style="text-align:left">\s</td>
+<td style="text-align:left">匹配任何空白字符，包括空格、制表符、换页符等等。等价于 [ \f\n\r\t\v]。注意 Unicode 正则表达式会匹配全角空格符。</td>
+</tr>
+<tr>
+<td style="text-align:left">\S</td>
+<td style="text-align:left">匹配任何非空白字符。等价于 [^ \f\n\r\t\v]。</td>
+</tr>
+<tr>
+<td style="text-align:left">\t</td>
+<td style="text-align:left">匹配一个制表符。等价于 \x09 和 \cI。</td>
+</tr>
+<tr>
+<td style="text-align:left">\v</td>
+<td style="text-align:left">匹配一个垂直制表符。等价于 \x0b 和 \cK。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="限定符">限定符：</h3>
 <table>
 <thead>
 <tr>
@@ -67,6 +111,7 @@
 </tr>
 </tbody>
 </table>
+<p>看的明白这个表格嘛？如果你已经明白了，则可以跳过这几段直接看下一个内容<a href="https://kingsingledog.github.io/post/qiao-jian-dan-de-zheng-ze-biao-da-shi-jiao-cheng/#%E5%AE%9A%E4%BD%8D%E7%AC%A6">定位符</a></p>
 <p>如果你没看懂上表的话也没关系，在往下读之前，你只需了解有哪几个限定符就够了，下面我会为你介绍每一个的具体用法。</p>
 <p>限定符，顾名思义就是拿来限定它前面的那个字符出现次数的，举个栗子🌰：</p>
 <pre><code>1. runb
@@ -97,7 +142,7 @@
 <p>上面说到我们在匹配电话号码的时候却连邮政编码都匹配出来了，然而聪明的我们发现，手机号码一般为十一位数，而邮政编码只有六位数，这时候我们就可以使用我们的<code>{n, m}</code>限定符来匹配包含十一位数的电话号码了：<code>[0-9]{11}</code>。</p>
 <p>这时候你可能会发现，我只在<code>{ }</code>里面填了一个数，这是因为我们是准确知道电话号码是十一位数的，我们填一个数进去就是精准匹配的意思，也就是<code>{n}</code>的形式，如果我要匹配十一位数或以上的号码呢，那只需在<code>n</code>的后面加上一个<code>,</code>即可，它代表着匹配十一位到无穷多的字符，而少于十一位的就不匹配。那如果我想要匹配十一位到十五位的字符呢，这时就要用到<code>{11, 15}</code>这样的表达式来限制了。</p>
 <p>以上就是限定符的基本内容了👐</p>
-<h4 id="定位符">定位符</h4>
+<h3 id="定位符">定位符</h3>
 <table>
 <thead>
 <tr>
