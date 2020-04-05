@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsingledog.github.io/</id>
     <title>Shello World</title>
-    <updated>2020-04-04T11:40:50.792Z</updated>
+    <updated>2020-04-05T11:59:20.472Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsingledog.github.io/"/>
     <link rel="self" href="https://kingsingledog.github.io/atom.xml"/>
@@ -10,6 +10,45 @@
     <logo>https://kingsingledog.github.io/images/avatar.png</logo>
     <icon>https://kingsingledog.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Shello World</rights>
+    <entry>
+        <title type="html"><![CDATA[言函]]></title>
+        <id>https://kingsingledog.github.io/post/yan-han/</id>
+        <link href="https://kingsingledog.github.io/post/yan-han/">
+        </link>
+        <updated>2020-04-05T11:11:33.000Z</updated>
+        <summary type="html"><![CDATA[<p>🙇 汇集喜欢的名言</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>🙇 汇集喜欢的名言</p>
+<!-- more -->
+<ol>
+<li>你日渐平庸，甘于平庸，将继续平庸。—— 《以自己喜欢的方式过一生》</li>
+<li>我将融入剧烈争斗的大人世界，要在那边孤军奋战，必须变得比任何人都坚不可摧。——《海边的卡夫卡》</li>
+<li>且视他人之疑目如盏盏鬼火，大胆地去走你的夜路。——史铁生《病隙碎笔》</li>
+<li>所有的不平淡，都是在忍耐了足够的平淡之后诞生的。——《白说》</li>
+<li>在最深的绝望里，遇见最美丽的风景。——几米</li>
+<li>总是有人要赢的，那为什么不能是我呢？——科比·布莱恩特</li>
+<li>不要嘲笑那些比你们拼命努力的人，也不要理会那些嘲笑你拼命努力的人。——松下幸之助</li>
+<li>你那么憎恨那些人，和他们斗了那么久，最终却要变得和他们一样，人世间没有任何理想值得以这样的沉沦作为代价。——马尔克斯《百年孤独》</li>
+<li>把最复杂的变成最简单的，才是最高明的。——达·芬奇</li>
+<li>大雨可以延迟我们到达的时间，但不能阻止我们前进。——卢梭</li>
+<li>如果结果不如你所愿，就在尘埃落定前奋力一搏。——《夏目友人帐》</li>
+<li>每个人为了活下去都必须找到点燃自己心头之火的力量，那烈焰就是灵魂的食粮。——刘同</li>
+<li>绝不放弃之心，将成为贯穿逆境之光。——《妖精的尾巴》</li>
+<li>没有不可治愈的伤痛，没有不能结束的沉沦，所有失去的，会以另一种方式归来。——约翰·肖尔斯</li>
+<li>我们仍需与生命的慷慨与繁华相爱，即使岁月以荒芜和刻薄相欺。——《尘曲》</li>
+<li>天空黑暗到一定程度，星辰就会熠熠生辉。——比尔德</li>
+<li>今天所有的混乱与芜杂，努力与精进，都将在进步中变得更加清晰。——新京报</li>
+<li>维持现状意味着空耗你的努力和生命。——纪伯伦</li>
+<li>有些事不是看到了希望才去坚持，而是因为坚持才会看到希望。——《十宗罪》</li>
+<li>不必行色匆匆，不必光芒四射，不必成为别人，只需做自己。——弗吉尼亚·伍尔夫</li>
+<li>人生太短，要干的事太多，我要争分夺秒。——爱迪生</li>
+<li>迷路就是走路的一部分。 ——几米</li>
+<li>上帝只会给你能挺得过去的考验。——《仁医》</li>
+<li>趁我们头脑发热，我们要不顾一切。——波德莱尔</li>
+<li>但凡不能杀死你的，最终都会使你更强大。——尼采26.人有逆天之时，天无绝人之路。——《醒世恒言》</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[敲简单的正则表达式教程]]></title>
         <id>https://kingsingledog.github.io/post/qiao-jian-dan-de-zheng-ze-biao-da-shi-jiao-cheng/</id>
@@ -182,9 +221,9 @@
         <link href="https://kingsingledog.github.io/post/za-han/">
         </link>
         <updated>2020-04-02T00:05:46.000Z</updated>
-        <summary type="html"><![CDATA[<p>一些乱七八糟的笔记📝</p>
+        <summary type="html"><![CDATA[<p>📝 一些乱七八糟的笔记</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>一些乱七八糟的笔记📝</p>
+        <content type="html"><![CDATA[<p>📝 一些乱七八糟的笔记</p>
 <!-- more -->
 <h3 id="win10-关闭开机启动项">win10 关闭开机启动项</h3>
 <p>步骤如下：</p>
