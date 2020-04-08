@@ -3,7 +3,7 @@
     <meta charset="utf-8"/>
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>教程 | Shello World</title>
+<title>git常用命令 | Shello World</title>
 <link rel="shortcut icon" href="https://kingsingledog.github.io//favicon.ico?v=1586344737168">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="https://kingsingledog.github.io//styles/main.css">
@@ -30,11 +30,11 @@
 
 
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 </head>
 <body>
 <div class="main gt-bg-theme-color-first">
-    <div class="main-content">
-        <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg">
     <div class="navbar-brand">
         <img class="user-avatar" src="/images/avatar.png" alt="头像">
         <div class="site-name gt-c-content-color-first">
@@ -83,50 +83,104 @@
         </div>
     </div>
 </nav>
-        <div class="current-tag-container">
-            <h2 class="title gt-c-content-color-first">
-                #教程
-            </h2>
-        </div>
-        <div class="post-list-container">
-    <div class="post-inner">
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://kingsingledog.github.io/post/qiao-jian-dan-de-zheng-ze-biao-da-shi-jiao-cheng/">
-                            <span class="post-title gt-c-content-color-first">敲简单的正则表达式教程</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p>🤡 这是一篇敲简单的正则表达式教程哇</p>
-
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-04-02 ·
-                        </time>
-                        
-                            <a href="https://kingsingledog.github.io/tag/ww1PN0j3u/" class="post-tag">
-                                # 正则表达式
-                            </a>
-                        
-                            <a href="https://kingsingledog.github.io/tag/NfG2-3M0yA/" class="post-tag">
-                                # 教程
-                            </a>
-                        
-                    </div>
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    git常用命令
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2020-04-08 ·
+                    </time>
+                    
                 </div>
-                
+                <div class="post-content">
+                    <p>👾 git常用到的命令</p>
+<!-- more -->
+<h2 id="无脑操作新手专属">无脑操作（新手专属）</h2>
+<pre><code># 克隆仓库到本地
+git clone [仓库地址]
+
+# 打开本地仓库
+cd [仓库名]
+
+# 修改文件
+......
+
+# 添加全部修改过的内容到暂存区
+git add --all
+
+# 提交修改
+git commit -m &quot;本次提交的说明&quot;
+
+# 推送到远程仓库
+git push -u origin master
+</code></pre>
+<h2 id="新建仓库">新建仓库</h2>
+<pre><code># 在本地创建一个名为[项目名称]的仓库
+git init [项目名称]
+
+# 克隆仓库到本地
+git clone [仓库链接]
+</code></pre>
+<h2 id="配置">配置</h2>
+<pre><code># 显示配置列表
+git config --list
+
+# 修改配置中的用户名
+git config [--global] user.name &quot;[用户名]&quot;
+
+# 修改配置中的邮箱地址
+git config [--global] user.email &quot;[邮箱地址]&quot;
+</code></pre>
+<h2 id="增加删除文件">增加/删除文件</h2>
+<pre><code># 添加当前工作区的全部文件到暂存区
+git add --all
+
+# 添加指定文件到暂存区
+git add [文件1] [文件2] [文件3]
+
+# 添加文件夹到暂存区，包括子目录
+git add [文件夹]
+
+# 添加当前目录到暂存区
+git add .
+
+# 添加每个变化前都会要求确认
+git add -p
+
+# 删除工作区的指定文件并把这次删除放入暂存区
+git rm [文件1] [文件2] [文件3]
+
+# 停止追踪指定文件，但该文件会保留在工作区
+git rm --cached [文件]
+
+# 移动文件，可用来重命名文件
+git mv [原文件] [移动后的文件]
+</code></pre>
+<h2 id="提交代码">提交代码</h2>
+<h2 id="分支">分支</h2>
+<h2 id="标签">标签</h2>
+<h2 id="查看信息">查看信息</h2>
+<h2 id="远程同步">远程同步</h2>
+<h2 id="撤销">撤销</h2>
+<h2 id="其他">其他</h2>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://kingsingledog.github.io/post/yan-han/" class="post-title gt-a-link">
+                    言函
+                </a>
             </div>
         
-    </div>
-</div>
-        <div class="pagination-container">
-    
-    
-</div>
+
+        
 
         <div class="site-footer gt-c-content-color-first">
     <div class="slogan gt-c-content-color-first">今日天气唔错喔！</div>
@@ -169,6 +223,7 @@
 <script>
     hljs.initHighlightingOnLoad()
 </script>
+
 
     </div>
 </div>

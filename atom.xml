@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsingledog.github.io/</id>
     <title>Shello World</title>
-    <updated>2020-04-07T23:59:50.208Z</updated>
+    <updated>2020-04-08T11:19:16.739Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsingledog.github.io/"/>
     <link rel="self" href="https://kingsingledog.github.io/atom.xml"/>
@@ -10,6 +10,86 @@
     <logo>https://kingsingledog.github.io/images/avatar.png</logo>
     <icon>https://kingsingledog.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Shello World</rights>
+    <entry>
+        <title type="html"><![CDATA[git常用命令]]></title>
+        <id>https://kingsingledog.github.io/post/git-chang-yong-ming-ling/</id>
+        <link href="https://kingsingledog.github.io/post/git-chang-yong-ming-ling/">
+        </link>
+        <updated>2020-04-08T10:46:27.000Z</updated>
+        <summary type="html"><![CDATA[<p>👾 git常用到的命令</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>👾 git常用到的命令</p>
+<!-- more -->
+<h2 id="无脑操作新手专属">无脑操作（新手专属）</h2>
+<pre><code># 克隆仓库到本地
+git clone [仓库地址]
+
+# 打开本地仓库
+cd [仓库名]
+
+# 修改文件
+......
+
+# 添加全部修改过的内容到暂存区
+git add --all
+
+# 提交修改
+git commit -m &quot;本次提交的说明&quot;
+
+# 推送到远程仓库
+git push -u origin master
+</code></pre>
+<h2 id="新建仓库">新建仓库</h2>
+<pre><code># 在本地创建一个名为[项目名称]的仓库
+git init [项目名称]
+
+# 克隆仓库到本地
+git clone [仓库链接]
+</code></pre>
+<h2 id="配置">配置</h2>
+<pre><code># 显示配置列表
+git config --list
+
+# 修改配置中的用户名
+git config [--global] user.name &quot;[用户名]&quot;
+
+# 修改配置中的邮箱地址
+git config [--global] user.email &quot;[邮箱地址]&quot;
+</code></pre>
+<h2 id="增加删除文件">增加/删除文件</h2>
+<pre><code># 添加当前工作区的全部文件到暂存区
+git add --all
+
+# 添加指定文件到暂存区
+git add [文件1] [文件2] [文件3]
+
+# 添加文件夹到暂存区，包括子目录
+git add [文件夹]
+
+# 添加当前目录到暂存区
+git add .
+
+# 添加每个变化前都会要求确认
+git add -p
+
+# 删除工作区的指定文件并把这次删除放入暂存区
+git rm [文件1] [文件2] [文件3]
+
+# 停止追踪指定文件，但该文件会保留在工作区
+git rm --cached [文件]
+
+# 移动文件，可用来重命名文件
+git mv [原文件] [移动后的文件]
+</code></pre>
+<h2 id="提交代码">提交代码</h2>
+<h2 id="分支">分支</h2>
+<h2 id="标签">标签</h2>
+<h2 id="查看信息">查看信息</h2>
+<h2 id="远程同步">远程同步</h2>
+<h2 id="撤销">撤销</h2>
+<h2 id="其他">其他</h2>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[言函]]></title>
         <id>https://kingsingledog.github.io/post/yan-han/</id>
@@ -56,9 +136,9 @@
         <link href="https://kingsingledog.github.io/post/qiao-jian-dan-de-zheng-ze-biao-da-shi-jiao-cheng/">
         </link>
         <updated>2020-04-02T01:02:15.000Z</updated>
-        <summary type="html"><![CDATA[<p>这是一篇敲简单的正则表达式教程哇</p>
+        <summary type="html"><![CDATA[<p>🤡 这是一篇敲简单的正则表达式教程哇</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>这是一篇敲简单的正则表达式教程哇</p>
+        <content type="html"><![CDATA[<p>🤡 这是一篇敲简单的正则表达式教程哇</p>
 <!-- more -->
 <h2 id="简介">📜简介</h2>
 <h3 id="正则表达式是啥">🤔 正则表达式是啥？</h3>
