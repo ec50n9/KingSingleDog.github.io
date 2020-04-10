@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsingledog.github.io/</id>
     <title>Shello World</title>
-    <updated>2020-04-10T08:42:58.824Z</updated>
+    <updated>2020-04-10T08:51:17.383Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsingledog.github.io/"/>
     <link rel="self" href="https://kingsingledog.github.io/atom.xml"/>
@@ -28,7 +28,7 @@
 <p>链接：</p>
 <blockquote>
 <p><a href="https://github.com/wechaty/wechaty">wechaty（基于web协议）</a><br>
-<a href="https://wechaty.github.io/wechaty">wechaty 文档</a></p>
+<a href="https://wechaty.github.io/wechaty">wechaty 官方文档</a></p>
 </blockquote>
 <p>总结起来就是，你可以使用node.js调用wechaty库来做出你自己的机器人。既然要用到node.js和wechaty库，那我们首先要做的就是安装它们。</p>
 <h1 id="安装-nodejs">安装 node.js</h1>
@@ -73,8 +73,15 @@ Wechaty.instance() // Global Instance
 .on('message', message =&gt; console.log(`Message: ${message}`))
 .start()
 </code></pre>
-<h3 id="第三部运行代码">第三部：运行代码</h3>
+<h3 id="第三步运行代码">第三步：运行代码</h3>
 <p><code>node robot.js</code></p>
+<h3 id="第四步修改代码">第四步：修改代码</h3>
+<p>如果以上步骤你都运行成功的话，那你现在应该会很想修改代码来实现自己的机器人了，在这里附上几个你可能用得上的链接：</p>
+<blockquote>
+<p><a href="https://www.runoob.com/nodejs">Node.js教程 - 菜鸟教程</a><br>
+<a href="https://wechaty.github.io/wechaty">wechaty 官方文档</a></p>
+</blockquote>
+<p>祝你玩的开心！</p>
 ]]></content>
     </entry>
     <entry>
