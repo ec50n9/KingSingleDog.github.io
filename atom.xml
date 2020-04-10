@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsingledog.github.io/</id>
     <title>Shello World</title>
-    <updated>2020-04-10T08:42:33.199Z</updated>
+    <updated>2020-04-10T08:42:58.824Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsingledog.github.io/"/>
     <link rel="self" href="https://kingsingledog.github.io/atom.xml"/>
@@ -16,7 +16,10 @@
         <link href="https://kingsingledog.github.io/post/shi-yong-wechaty-lai-gou-jian-wei-xin-ji-qi-ren/">
         </link>
         <updated>2020-04-10T02:51:52.000Z</updated>
+        <summary type="html"><![CDATA[<p>🤖 你的下一个女友，何必是“女”友</p>
+]]></summary>
         <content type="html"><![CDATA[<p>🤖 你的下一个女友，何必是“女”友</p>
+<!-- more -->
 <h1 id="wechaty-介绍">wechaty 介绍</h1>
 <p>官方说明：</p>
 <blockquote>
