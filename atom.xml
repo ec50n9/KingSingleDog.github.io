@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsingledog.github.io/</id>
     <title>Shello World</title>
-    <updated>2020-04-10T09:03:42.856Z</updated>
+    <updated>2020-04-11T13:55:15.185Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsingledog.github.io/"/>
     <link rel="self" href="https://kingsingledog.github.io/atom.xml"/>
@@ -20,7 +20,7 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>🤖 你的下一个女友，何必是“女”友</p>
 <!-- more -->
-<h1 id="wechaty-介绍">wechaty 介绍</h1>
+<h1 id="0-wechaty-介绍">0. wechaty 介绍</h1>
 <p>官方说明：</p>
 <blockquote>
 <p>Wechaty is a Bot SDK for Wechat Individual Account which can help you create a bot in 6 lines of javascript, with cross-platform support including Linux, Windows, MacOS, and Docker.</p>
@@ -30,17 +30,18 @@
 <p><a href="https://github.com/wechaty/wechaty">wechaty（基于web协议）</a><br>
 <a href="https://wechaty.github.io/wechaty">wechaty 官方文档</a></p>
 </blockquote>
-<p>总结起来就是，你可以使用node.js调用wechaty库来做出你自己的机器人。既然要用到node.js和wechaty库，那我们首先要做的就是安装它们。</p>
-<h1 id="安装-nodejs">安装 node.js</h1>
+<p>总结起来就是，你可以使用node.js调用wechaty库来做出你自己的机器人。值得注意的是，当前微信web协议不支持登录2017年后注册的微信，如果你的微信是2017年后才注册的，请去找ipad协议的api。</p>
+<p>既然要用到node.js和wechaty库，那我们首先要做的就是安装它们。</p>
+<h1 id="1-安装-nodejs">1. 安装 node.js</h1>
 <p>node.js是一种类似与php的语言。</p>
-<h2 id="下载">下载</h2>
+<h2 id="11-下载">1.1 下载</h2>
 <p>链接：</p>
 <blockquote>
 <p><a href="https://nodejs.org/zh-cn/">官网</a><br>
 <a href="https://npm.taobao.org/mirrors/node/">阿里云镜像</a></p>
 </blockquote>
 <p>在上面的网站里面找到你适用于你系统的安装包并下载。注意，在官网下载的话可能速度会比较慢，建议从阿里云镜像中下载。</p>
-<h2 id="安装">安装</h2>
+<h2 id="12-安装">1.2 安装</h2>
 <p>下载好后就打开，因为我用的是windows，所以我这里就用windows下的安装来做例子：<br>
 <img src="https://kingsingledog.github.io//post-images/1586505151478.png" alt="" loading="lazy"><br>
 点击<code>next</code><br>
@@ -49,39 +50,54 @@
 <img src="https://kingsingledog.github.io//post-images/1586505164472.png" alt="" loading="lazy"><br>
 继续<code>next</code><br>
 最后等待几分钟就安装完成了。</p>
-<h2 id="验证">验证</h2>
+<h2 id="13-验证">1.3 验证</h2>
 <p>打开power shell或者其他命令行终端，输入<code>node -v</code>来查看node的版本，如果输出一个版本号即说明node.js已经安装成功了。</p>
-<h1 id="安装-wechaty">安装 wechaty</h1>
+<h2 id="14-使用-cnpm-作为包管理器">1.4 使用 cnpm 作为包管理器</h2>
 <p>npm是node.js的包管理器，但由于npm默认的源是在国外的，访问速度实在感人，所以在这里我建议你使用 <a href="https://developer.aliyun.com/mirror/NPM?from=tnpm">淘宝npm镜像</a> 来进行包管理。在命令行输入：</p>
 <p><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></p>
-<p>即可自动安装cnpm。<br>
-安装好cnpm后就可以直接使用cnpm来安装wechaty了：</p>
-<p><code>cnpm install wechaty</code></p>
-<p>至此，我们已经完成wechaty的安装了。</p>
-<h1 id="使用-wechaty">使用 wechaty</h1>
+<p>即可自动安装cnpm。</p>
+<h1 id="2-使用-wechaty">2. 使用 wechaty</h1>
 <p>如官方介绍所言，构建一个机器人只需要简单几步：</p>
-<h3 id="第一步创建js文件">第一步：创建js文件</h3>
-<p><code>touch robot.js</code></p>
-<h3 id="第二步写入代码">第二步：写入代码</h3>
+<h2 id="21-初始化环境">2.1 初始化环境</h2>
+<pre><code>npm init
+</code></pre>
+<p>或</p>
+<pre><code>cnpm init
+</code></pre>
+<blockquote>
+<p>注：初次使用cnpm可能会报“因为在此系统中禁止执行脚本”错误，解决方法参见<a href="http://localhost:4000/post/za-han/#powershell-%E5%9B%A0%E4%B8%BA%E5%9C%A8%E6%AD%A4%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%A6%81%E6%AD%A2%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95">PowerShell “因为在此系统中禁止执行脚本”的解决方法</a>，解决后重新执行<code>cnpm init</code>命令即可。</p>
+</blockquote>
+<p>接着会要求你输入项目名称和作者等信息，没有特殊要求好话可以一路回车跳过。</p>
+<h2 id="22-安装wechaty">2.2 安装wechaty</h2>
+<pre><code>npm install wechaty
+</code></pre>
+<p>或</p>
+<pre><code>cnpm install wechaty
+</code></pre>
+<h2 id="23-创建js文件">2.3 创建js文件</h2>
+<pre><code>touch robot.js
+</code></pre>
+<h3 id="24-写入代码">2.4 写入代码</h3>
 <p>在<code>robot.js</code>文件中写入以下代码：</p>
 <pre><code>const { Wechaty } = require('wechaty') 
 // import { Wechaty } from 'wechaty'
 
 Wechaty.instance() // Global Instance
-.on('scan', (qrcode, status) =&gt; console.log(`Scan QR Code to login: ${status}\nhttps://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(qrcode)}`))
-.on('login', user =&gt; console.log(`User ${user} logined`))
-.on('message', message =&gt; console.log(`Message: ${message}`))
-.start()
+    .on('scan', (qrcode, status) =&gt; console.log(`Scan QR Code to login: ${status}\nhttps://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(qrcode)}`))
+    .on('login', user =&gt; console.log(`User ${user} logined`))
+    .on('message', message =&gt; console.log(`Message: ${message}`))
+    .start()
 </code></pre>
-<h3 id="第三步运行代码">第三步：运行代码</h3>
+<h3 id="25-运行代码">2.5 运行代码</h3>
 <p><code>node robot.js</code></p>
-<h3 id="第四步修改代码">第四步：修改代码</h3>
+<h3 id="26-修改代码">2.6 修改代码</h3>
 <p>如果以上步骤你都运行成功的话，那你现在应该会很想修改代码来实现自己的机器人了，在这里附上几个你可能用得上的链接：</p>
 <blockquote>
 <p><a href="https://www.runoob.com/nodejs">Node.js教程 - 菜鸟教程</a><br>
 <a href="https://wechaty.github.io/wechaty">wechaty 官方文档</a></p>
 </blockquote>
 <p>祝你玩的开心！</p>
+<p>以上。</p>
 ]]></content>
     </entry>
     <entry>
@@ -369,6 +385,7 @@ git mv [原文件] [移动后的文件]
 <p><a href="https://c.runoob.com/front-end/854">正则表达式在线测试 - 菜鸟教程</a></p>
 <h3 id="其他">🙆‍♂其他</h3>
 <p>部分内容参考自 <a href="https://www.runoob.com/regexp/regexp-tutorial.html">正则表达式 | 菜鸟教程</a></p>
+<p>以上。</p>
 ]]></content>
     </entry>
     <entry>
