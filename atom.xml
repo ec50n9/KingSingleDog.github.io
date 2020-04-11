@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsingledog.github.io/</id>
     <title>Shello World</title>
-    <updated>2020-04-11T13:58:58.732Z</updated>
+    <updated>2020-04-11T14:01:50.254Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsingledog.github.io/"/>
     <link rel="self" href="https://kingsingledog.github.io/atom.xml"/>
@@ -398,14 +398,14 @@ git mv [原文件] [移动后的文件]
 ]]></summary>
         <content type="html"><![CDATA[<p>📝 一些乱七八糟的笔记</p>
 <!-- more -->
-<h3 id="win10-关闭开机启动项">win10 关闭开机启动项</h3>
+<h2 id="0-win10-关闭开机启动项">0. win10 关闭开机启动项</h2>
 <p>步骤如下：</p>
 <ol>
 <li>打开任务管理器</li>
 <li>切换到“启动”选项卡</li>
 <li>右键需要禁用的任务进行具体操作</li>
 </ol>
-<h3 id="win10-快捷键">win10 快捷键</h3>
+<h2 id="1-win10-快捷键">1. win10 快捷键</h2>
 <ul>
 <li>快捷菜单：<strong>Win + X</strong></li>
 <li>剪切板：<strong>Win + V</strong></li>
@@ -413,25 +413,25 @@ git mv [原文件] [移动后的文件]
 <li>表情和特殊符号：<strong>Ctrl + Shift + B</strong></li>
 <li>打开“此电脑”：<strong>Win + E</strong></li>
 </ul>
-<h3 id="pip-更换下载源">pip 更换下载源</h3>
+<h2 id="2-pip-更换下载源">2. pip 更换下载源</h2>
 <pre><code>$ pip install pqi #安装 pqi
 $ pqi ls # 显示全部源
 $ pqi use aliyuan # 使用源
 </code></pre>
 <p>来自：<a href="https://jingyan.baidu.com/article/455a995067da61a16727785a.html">pip下载Python扩展包时如何提高下载速度</a></p>
-<h3 id="网页在线工具万能命令">网页在线工具（万能命令）</h3>
+<h2 id="3-网页在线工具万能命令">3. 网页在线工具（万能命令）</h2>
 <p>在任意网址前面添加输入<code>wn.run/</code>，例如：<br>
 把<code>https://www.iqiyi.com/</code>编辑成<code>wn.run/https://www.iqiyi.com/</code><br>
 然后回车进入即可看见该网站能用的工具了。</p>
 <p>详细用法请参考：<a href="https://wanneng.run/cn/">万能命令</a></p>
-<h3 id="linux-登录问候语">Linux 登录问候语</h3>
+<h2 id="4-linux-登录问候语">4. Linux 登录问候语</h2>
 <pre><code>$ vi /etc/motd
 </code></pre>
 <p>来自：<a href="https://blog.csdn.net/rrlyrstar/article/details/79226190">Linux登录问候语</a></p>
-<h3 id="linux-开机启动脚本">Linux 开机启动脚本</h3>
+<h2 id="5-linux-开机启动脚本">5. Linux 开机启动脚本</h2>
 <p>系统启动后会自动执行<code>/etc/profile.d/</code>下的所有shell脚本，所以将写好的脚本（.sh文件）放到目录<code>/etc/profile.d/</code>下即可。</p>
 <p>来自：<a href="https://www.jb51.net/article/176257.htm">Linux 添加开机启动方法(服务/脚本)</a></p>
-<h3 id="excel的实用技巧">Excel的实用技巧</h3>
+<h2 id="6-excel的实用技巧">6. Excel的实用技巧</h2>
 <p>Office的软件往往大而全，学习成本非常大。有时候可以掌握一些小技巧，用一些巧劲让处理“更省事”，比较知名的比如 <strong>Ctrl+E</strong> 。它可以有点类似“重复上一步”的功能，绝大多数人眼可以观察出来的规律，它都可以做到：<br>
 比如，在某个内容后面加一个固定的东西了。你只需要手动改第一个，然后按 <strong>Ctrl+E</strong> ：</p>
 <p>再比如说把一段完整的内容分割成几部分了（为防止随机数生成出真实手机号影响他人，均打码一位）：<strong>Ctrl+E！</strong></p>
@@ -439,10 +439,10 @@ $ pqi use aliyuan # 使用源
 <p>或者你想从一大段完整的信息中，提取出某个部分来：<strong>Ctrl+E！</strong></p>
 <p>甚至将几部分的内容整合为一句完整的话：<strong>Ctrl+E！</strong></p>
 <p>来自：<a href="https://www.zhihu.com/question/352321370/answer/989335660">知乎：作为一名在校大学生不会用电脑怎么办？ - 求学时 的回答</a></p>
-<h3 id="魔方还原机器人">魔方还原机器人</h3>
+<h2 id="7-魔方还原机器人">7. 魔方还原机器人</h2>
 <p>原理图：</p>
 <p>来自：<a href="https://www.zhihu.com/question/23149991/answer/988550313">知乎：怎么能做出一台在 5 秒内解开魔方的机器人 ？</a></p>
-<h3 id="powershell-因为在此系统中禁止执行脚本的解决方法">PowerShell “因为在此系统中禁止执行脚本”的解决方法</h3>
+<h2 id="8-powershell-因为在此系统中禁止执行脚本的解决方法">8. PowerShell “因为在此系统中禁止执行脚本”的解决方法</h2>
 <p>以管理员身份运行powershell，然后执行以下命令：</p>
 <pre><code>set-ExecutionPolicy RemoteSigned
 </code></pre>
