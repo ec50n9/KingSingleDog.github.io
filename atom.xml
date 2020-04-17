@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsingledog.github.io/</id>
     <title>Shello World</title>
-    <updated>2020-04-11T14:03:11.579Z</updated>
+    <updated>2020-04-17T11:44:55.543Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsingledog.github.io/"/>
     <link rel="self" href="https://kingsingledog.github.io/atom.xml"/>
@@ -10,6 +10,112 @@
     <logo>https://kingsingledog.github.io/images/avatar.png</logo>
     <icon>https://kingsingledog.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Shello World</rights>
+    <entry>
+        <title type="html"><![CDATA[Python3 实现翻译]]></title>
+        <id>https://kingsingledog.github.io/post/python3-shi-xian-fan-yi/</id>
+        <link href="https://kingsingledog.github.io/post/python3-shi-xian-fan-yi/">
+        </link>
+        <updated>2020-04-17T10:29:29.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="0-调用模块">0. 调用模块</h2>
+<h3 id="01-调用-googletrans-库">0.1 调用 googletrans 库</h3>
+<p>安装：</p>
+<pre><code>$ pip install googletrans
+</code></pre>
+<p>调用：</p>
+<pre><code>from googletrans import Translator
+
+# 中 -&gt; 英
+print(translator_google.translate('你好，世界！', dest='en').text)
+# 英 -&gt; 中
+print(translator_google.translate('Hello World!', dest='zh-CN').text)
+</code></pre>
+<p>完整使用请参考：<a href="https://pypi.org/project/py-translate/">py-translate · pypi</a></p>
+<p>报错：</p>
+<blockquote>
+<p>不出意外的话，在使用过程中会出现连接超时等报错，这是因为它默认调用的接口在墙外，我们需要手动修改模块的源码把<code>translate.google.com</code>修改为<code>translate.google.cn</code>。具体操作如下：</p>
+<p>分别打开<code>/Python路径/Lib/site-packages/googletrans</code>中的<code>gtoken.py</code>、<code>urls.py</code>和<code>client.py</code>，把这三个文件中的<code>translate.google.com</code>修改为<code>translate.google.cn</code>即可。</p>
+</blockquote>
+<p>笔记：</p>
+<blockquote>
+<p>谷歌翻译一次最多5000字符，大概就是500个单词，20-30句话左右，每次翻译时间1s以内，所以如果翻译的文本较长，建议拆分为5000个字符一段一段的来翻译，并使用多线程，能大幅度提升翻译效率。</p>
+</blockquote>
+<h2 id="1-使用网页接口">1. 使用网页接口</h2>
+<p>这种方法主要是调用百度等平台的翻译接口，需要自行去注册</p>
+<h3 id="11-导入模块">1.1 导入模块</h3>
+<pre><code>import re
+import urllib.parse, urllib.request
+import hashlib
+import urllib
+import random
+import json
+import time
+</code></pre>
+<h3 id="12-百度翻译">1.2 百度翻译</h3>
+<pre><code>appid = 'your_appid'
+secretKey = 'your_secretKey'
+url_baidu = 'http://api.fanyi.baidu.com/api/trans/vip/translate'
+
+def translateBaidu(text, f='ja', t='zh'):
+    salt = random.randint(32768, 65536)
+    sign = appid + text + str(salt) + secretKey
+    sign = hashlib.md5(sign.encode()).hexdigest()
+    url = url_baidu + '?appid=' + appid + '&amp;q=' + urllib.parse.quote(text) + '&amp;from=' + f + '&amp;to=' + t + \
+    '&amp;salt=' + str(salt) + '&amp;sign=' + sign
+    response = urllib.request.urlopen(url)
+    content = response.read().decode('utf-8')
+    data = json.loads(content)
+    result = str(data['trans_result'][0]['dst'])
+    print(result)
+</code></pre>
+<p>参数：text--待翻文本，f--初始语言，t--目标语言，后面方法类似。</p>
+<h3 id="13-有道翻译">1.3 有道翻译</h3>
+<pre><code>url_youdao = 'http://fanyi.youdao.com/translate?smartresult=dict&amp;smartresult=rule&amp;smartresult=ugc&amp;sessionFrom=' \
+      'http://www.youdao.com/'
+dict = {}
+dict['type'] = 'AUTO'
+dict['doctype'] = 'json'
+dict['xmlVersion'] = '1.8'
+dict['keyfrom'] = 'fanyi.web'
+dict['ue'] = 'UTF-8'
+dict['action'] = 'FY_BY_CLICKBUTTON'
+dict['typoResult'] = 'true'
+
+def translateYoudao(text):
+    global dict
+    dict['i'] = text
+    data = urllib.parse.urlencode(dict).encode('utf-8')
+    response = urllib.request.urlopen(url_youdao, data)
+    content = response.read().decode('utf-8')
+    data = json.loads(content)
+    result = data['translateResult'][0][0]['tgt']
+    print(result)
+</code></pre>
+<p>参数主要由字典dict指定，发现没有地方可以指定语言（可能是我没找到），测试结果是不管输入什么语言的文本，输出均是中文。</p>
+<h3 id="14-谷歌翻译">1.4 谷歌翻译</h3>
+<pre><code>url_google = 'http://translate.google.cn'
+reg_text = re.compile(r'(?&lt;=TRANSLATED_TEXT=).*?;')
+user_agent = r'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) ' \
+                 r'Chrome/44.0.2403.157 Safari/537.36'
+
+def translateGoogle(text, f='ja', t='zh-cn'):
+    values = {'hl': 'zh-cn', 'ie': 'utf-8', 'text': text, 'langpair': '%s|%s' % (f, t)}
+    value = urllib.parse.urlencode(values)
+    req = urllib.request.Request(url_google + '?' + value)
+    req.add_header('User-Agent', user_agent)
+    response = urllib.request.urlopen(req)
+    content = response.read().decode('utf-8')
+    data = reg_text.search(content)
+    result = data.group(0).strip(';').strip('\'')
+    print(result)
+</code></pre>
+<p>和上面两种方法一样，采用的是访问网页的形式来进行翻译。</p>
+<h3 id="15-笔记">1.5 笔记</h3>
+<blockquote>
+<p>如果觉得耗时的话可以使用线程，能将翻译速度提升几倍。</p>
+<p>本篇部分内容参考自<a href="https://www.cnblogs.com/tgyf/p/6936221.html">python有哪些好用的语言翻译方法 - 路上的脚印</a></p>
+</blockquote>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[使用 wechaty 来构建微信机器人]]></title>
         <id>https://kingsingledog.github.io/post/shi-yong-wechaty-lai-gou-jian-wei-xin-ji-qi-ren/</id>

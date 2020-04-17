@@ -3,7 +3,7 @@
     <meta charset="utf-8"/>
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>言函 | Shello World</title>
+<title>Python3 实现翻译 | Shello World</title>
 <link rel="shortcut icon" href="https://kingsingledog.github.io//favicon.ico?v=1587123891736">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="https://kingsingledog.github.io//styles/main.css">
@@ -87,49 +87,113 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    言函
+                    Python3 实现翻译
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
-                        · 2020-04-05 ·
+                        · 2020-04-17 ·
                     </time>
-                    
-                        <a href="https://kingsingledog.github.io/tag/JIqSdGjYH/" class="post-tags">
-                            # 笔记
-                        </a>
                     
                 </div>
                 <div class="post-content">
-                    <p>🙇 汇集喜欢的名言</p>
-<!-- more -->
-<ol>
-<li>你日渐平庸，甘于平庸，将继续平庸。—— 《以自己喜欢的方式过一生》</li>
-<li>我将融入剧烈争斗的大人世界，要在那边孤军奋战，必须变得比任何人都坚不可摧。——《海边的卡夫卡》</li>
-<li>且视他人之疑目如盏盏鬼火，大胆地去走你的夜路。——史铁生《病隙碎笔》</li>
-<li>所有的不平淡，都是在忍耐了足够的平淡之后诞生的。——《白说》</li>
-<li>在最深的绝望里，遇见最美丽的风景。——几米</li>
-<li>总是有人要赢的，那为什么不能是我呢？——科比·布莱恩特</li>
-<li>不要嘲笑那些比你们拼命努力的人，也不要理会那些嘲笑你拼命努力的人。——松下幸之助</li>
-<li>你那么憎恨那些人，和他们斗了那么久，最终却要变得和他们一样，人世间没有任何理想值得以这样的沉沦作为代价。——马尔克斯《百年孤独》</li>
-<li>把最复杂的变成最简单的，才是最高明的。——达·芬奇</li>
-<li>大雨可以延迟我们到达的时间，但不能阻止我们前进。——卢梭</li>
-<li>如果结果不如你所愿，就在尘埃落定前奋力一搏。——《夏目友人帐》</li>
-<li>每个人为了活下去都必须找到点燃自己心头之火的力量，那烈焰就是灵魂的食粮。——刘同</li>
-<li>绝不放弃之心，将成为贯穿逆境之光。——《妖精的尾巴》</li>
-<li>没有不可治愈的伤痛，没有不能结束的沉沦，所有失去的，会以另一种方式归来。——约翰·肖尔斯</li>
-<li>我们仍需与生命的慷慨与繁华相爱，即使岁月以荒芜和刻薄相欺。——《尘曲》</li>
-<li>天空黑暗到一定程度，星辰就会熠熠生辉。——比尔德</li>
-<li>今天所有的混乱与芜杂，努力与精进，都将在进步中变得更加清晰。——新京报</li>
-<li>维持现状意味着空耗你的努力和生命。——纪伯伦</li>
-<li>有些事不是看到了希望才去坚持，而是因为坚持才会看到希望。——《十宗罪》</li>
-<li>不必行色匆匆，不必光芒四射，不必成为别人，只需做自己。——弗吉尼亚·伍尔夫</li>
-<li>人生太短，要干的事太多，我要争分夺秒。——爱迪生</li>
-<li>迷路就是走路的一部分。 ——几米</li>
-<li>上帝只会给你能挺得过去的考验。——《仁医》</li>
-<li>趁我们头脑发热，我们要不顾一切。——波德莱尔</li>
-<li>但凡不能杀死你的，最终都会使你更强大。——尼采</li>
-<li>人有逆天之时，天无绝人之路。——《醒世恒言》</li>
-</ol>
+                    <h2 id="0-调用模块">0. 调用模块</h2>
+<h3 id="01-调用-googletrans-库">0.1 调用 googletrans 库</h3>
+<p>安装：</p>
+<pre><code>$ pip install googletrans
+</code></pre>
+<p>调用：</p>
+<pre><code>from googletrans import Translator
+
+# 中 -&gt; 英
+print(translator_google.translate('你好，世界！', dest='en').text)
+# 英 -&gt; 中
+print(translator_google.translate('Hello World!', dest='zh-CN').text)
+</code></pre>
+<p>完整使用请参考：<a href="https://pypi.org/project/py-translate/">py-translate · pypi</a></p>
+<p>报错：</p>
+<blockquote>
+<p>不出意外的话，在使用过程中会出现连接超时等报错，这是因为它默认调用的接口在墙外，我们需要手动修改模块的源码把<code>translate.google.com</code>修改为<code>translate.google.cn</code>。具体操作如下：</p>
+<p>分别打开<code>/Python路径/Lib/site-packages/googletrans</code>中的<code>gtoken.py</code>、<code>urls.py</code>和<code>client.py</code>，把这三个文件中的<code>translate.google.com</code>修改为<code>translate.google.cn</code>即可。</p>
+</blockquote>
+<p>笔记：</p>
+<blockquote>
+<p>谷歌翻译一次最多5000字符，大概就是500个单词，20-30句话左右，每次翻译时间1s以内，所以如果翻译的文本较长，建议拆分为5000个字符一段一段的来翻译，并使用多线程，能大幅度提升翻译效率。</p>
+</blockquote>
+<h2 id="1-使用网页接口">1. 使用网页接口</h2>
+<p>这种方法主要是调用百度等平台的翻译接口，需要自行去注册</p>
+<h3 id="11-导入模块">1.1 导入模块</h3>
+<pre><code>import re
+import urllib.parse, urllib.request
+import hashlib
+import urllib
+import random
+import json
+import time
+</code></pre>
+<h3 id="12-百度翻译">1.2 百度翻译</h3>
+<pre><code>appid = 'your_appid'
+secretKey = 'your_secretKey'
+url_baidu = 'http://api.fanyi.baidu.com/api/trans/vip/translate'
+
+def translateBaidu(text, f='ja', t='zh'):
+    salt = random.randint(32768, 65536)
+    sign = appid + text + str(salt) + secretKey
+    sign = hashlib.md5(sign.encode()).hexdigest()
+    url = url_baidu + '?appid=' + appid + '&amp;q=' + urllib.parse.quote(text) + '&amp;from=' + f + '&amp;to=' + t + \
+    '&amp;salt=' + str(salt) + '&amp;sign=' + sign
+    response = urllib.request.urlopen(url)
+    content = response.read().decode('utf-8')
+    data = json.loads(content)
+    result = str(data['trans_result'][0]['dst'])
+    print(result)
+</code></pre>
+<p>参数：text--待翻文本，f--初始语言，t--目标语言，后面方法类似。</p>
+<h3 id="13-有道翻译">1.3 有道翻译</h3>
+<pre><code>url_youdao = 'http://fanyi.youdao.com/translate?smartresult=dict&amp;smartresult=rule&amp;smartresult=ugc&amp;sessionFrom=' \
+      'http://www.youdao.com/'
+dict = {}
+dict['type'] = 'AUTO'
+dict['doctype'] = 'json'
+dict['xmlVersion'] = '1.8'
+dict['keyfrom'] = 'fanyi.web'
+dict['ue'] = 'UTF-8'
+dict['action'] = 'FY_BY_CLICKBUTTON'
+dict['typoResult'] = 'true'
+
+def translateYoudao(text):
+    global dict
+    dict['i'] = text
+    data = urllib.parse.urlencode(dict).encode('utf-8')
+    response = urllib.request.urlopen(url_youdao, data)
+    content = response.read().decode('utf-8')
+    data = json.loads(content)
+    result = data['translateResult'][0][0]['tgt']
+    print(result)
+</code></pre>
+<p>参数主要由字典dict指定，发现没有地方可以指定语言（可能是我没找到），测试结果是不管输入什么语言的文本，输出均是中文。</p>
+<h3 id="14-谷歌翻译">1.4 谷歌翻译</h3>
+<pre><code>url_google = 'http://translate.google.cn'
+reg_text = re.compile(r'(?&lt;=TRANSLATED_TEXT=).*?;')
+user_agent = r'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) ' \
+                 r'Chrome/44.0.2403.157 Safari/537.36'
+
+def translateGoogle(text, f='ja', t='zh-cn'):
+    values = {'hl': 'zh-cn', 'ie': 'utf-8', 'text': text, 'langpair': '%s|%s' % (f, t)}
+    value = urllib.parse.urlencode(values)
+    req = urllib.request.Request(url_google + '?' + value)
+    req.add_header('User-Agent', user_agent)
+    response = urllib.request.urlopen(req)
+    content = response.read().decode('utf-8')
+    data = reg_text.search(content)
+    result = data.group(0).strip(';').strip('\'')
+    print(result)
+</code></pre>
+<p>和上面两种方法一样，采用的是访问网页的形式来进行翻译。</p>
+<h3 id="15-笔记">1.5 笔记</h3>
+<blockquote>
+<p>如果觉得耗时的话可以使用线程，能将翻译速度提升几倍。</p>
+<p>本篇部分内容参考自<a href="https://www.cnblogs.com/tgyf/p/6936221.html">python有哪些好用的语言翻译方法 - 路上的脚印</a></p>
+</blockquote>
 
                 </div>
             </article>
@@ -138,8 +202,8 @@
         
             <div class="next-post">
                 <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://kingsingledog.github.io/post/qiao-jian-dan-de-zheng-ze-biao-da-shi-jiao-cheng/" class="post-title gt-a-link">
-                    敲简单的正则表达式教程
+                <a href="https://kingsingledog.github.io/post/shi-yong-wechaty-lai-gou-jian-wei-xin-ji-qi-ren/" class="post-title gt-a-link">
+                    使用 wechaty 来构建微信机器人
                 </a>
             </div>
         
