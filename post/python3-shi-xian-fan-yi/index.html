@@ -4,7 +4,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Python 翻译文本 | Shello World</title>
-<link rel="shortcut icon" href="https://kingsingledog.github.io//favicon.ico?v=1587124412998">
+<link rel="shortcut icon" href="https://kingsingledog.github.io//favicon.ico?v=1587124566391">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="https://kingsingledog.github.io//styles/main.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -98,12 +98,11 @@
                 <div class="post-content">
                     <p>🐍 Python 翻译文本的几种方案</p>
 <!-- more -->
-<h2 id="0-调用模块">0. 调用模块</h2>
-<h3 id="01-调用-googletrans-库">0.1 调用 googletrans 库</h3>
-<p>安装：</p>
+<h2 id="0-调用-googletrans-库">0. 调用 googletrans 库</h2>
+<h3 id="01-安装">0.1 安装：</h3>
 <pre><code>$ pip install googletrans
 </code></pre>
-<p>调用：</p>
+<h3 id="02-调用">0.2 调用：</h3>
 <pre><code>from googletrans import Translator
 
 # 中 -&gt; 英
@@ -112,12 +111,12 @@ print(translator_google.translate('你好，世界！', dest='en').text)
 print(translator_google.translate('Hello World!', dest='zh-CN').text)
 </code></pre>
 <p>完整使用请参考：<a href="https://pypi.org/project/py-translate/">py-translate · pypi</a></p>
-<p>报错：</p>
+<h3 id="03-报错">0.3 报错：</h3>
 <blockquote>
 <p>不出意外的话，在使用过程中会出现连接超时等报错，这是因为它默认调用的接口在墙外，我们需要手动修改模块的源码把<code>translate.google.com</code>修改为<code>translate.google.cn</code>。具体操作如下：</p>
 <p>分别打开<code>/Python路径/Lib/site-packages/googletrans</code>中的<code>gtoken.py</code>、<code>urls.py</code>和<code>client.py</code>，把这三个文件中的<code>translate.google.com</code>修改为<code>translate.google.cn</code>即可。</p>
 </blockquote>
-<p>笔记：</p>
+<h3 id="04-笔记">0.4 笔记：</h3>
 <blockquote>
 <p>谷歌翻译一次最多5000字符，大概就是500个单词，20-30句话左右，每次翻译时间1s以内，所以如果翻译的文本较长，建议拆分为5000个字符一段一段的来翻译，并使用多线程，能大幅度提升翻译效率。</p>
 </blockquote>
