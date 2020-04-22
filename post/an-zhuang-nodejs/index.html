@@ -3,7 +3,7 @@
     <meta charset="utf-8"/>
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>微信 | Shello World</title>
+<title>安装 Node.js | Shello World</title>
 <link rel="shortcut icon" href="https://kingsingledog.github.io//favicon.ico?v=1587552463694">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="https://kingsingledog.github.io//styles/main.css">
@@ -30,11 +30,11 @@
 
 
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 </head>
 <body>
 <div class="main gt-bg-theme-color-first">
-    <div class="main-content">
-        <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg">
     <div class="navbar-brand">
         <img class="user-avatar" src="/images/avatar.png" alt="头像">
         <div class="site-name gt-c-content-color-first">
@@ -83,58 +83,58 @@
         </div>
     </div>
 </nav>
-        <div class="current-tag-container">
-            <h2 class="title gt-c-content-color-first">
-                #微信
-            </h2>
-        </div>
-        <div class="post-list-container">
-    <div class="post-inner">
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://kingsingledog.github.io/post/shi-yong-wechaty-lai-gou-jian-wei-xin-ji-qi-ren/">
-                            <span class="post-title gt-c-content-color-first">使用 wechaty 来构建微信机器人</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p>🤖 你的下一个女友，何必是“女”友</p>
-
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-04-10 ·
-                        </time>
-                        
-                            <a href="https://kingsingledog.github.io/tag/-qFZQx_Pf/" class="post-tag">
-                                # 微信
-                            </a>
-                        
-                            <a href="https://kingsingledog.github.io/tag/MJwHwUwwcc/" class="post-tag">
-                                # 自动化
-                            </a>
-                        
-                            <a href="https://kingsingledog.github.io/tag/NfG2-3M0yA/" class="post-tag">
-                                # 教程
-                            </a>
-                        
-                    </div>
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    安装 Node.js
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2020-04-22 ·
+                    </time>
+                    
                 </div>
-                
-                    <a href="https://kingsingledog.github.io/post/shi-yong-wechaty-lai-gou-jian-wei-xin-ji-qi-ren/" class="post-feature-image"
-                       style="background-image: url('https://kingsingledog.github.io//post-images/shi-yong-wechaty-lai-gou-jian-wei-xin-ji-qi-ren.jpg')">
-                    </a>
-                
+                <div class="post-content">
+                    <p>如何安装 Node.js</p>
+<!-- more -->
+<h1 id="0-下载">0. 下载</h1>
+<p>链接：</p>
+<blockquote>
+<p><a href="https://nodejs.org/zh-cn/">官网</a><br>
+<a href="https://npm.taobao.org/mirrors/node/">阿里云镜像</a></p>
+</blockquote>
+<p>在上面的网站里面找到你适用于你系统的安装包并下载。注意，在官网下载的话可能速度会比较慢，建议从阿里云镜像中下载。</p>
+<h1 id="1-安装">1. 安装</h1>
+<p>下载好后就打开，因为我用的是windows，所以我这里就用windows下的安装来做例子：<br>
+<img src="https://kingsingledog.github.io//post-images/1586505151478.png" alt="" loading="lazy"><br>
+点击<code>next</code><br>
+<img src="https://kingsingledog.github.io//post-images/1586505335442.png" alt="" loading="lazy"><br>
+勾选上同意协议后<code>next</code><br>
+<img src="https://kingsingledog.github.io//post-images/1586505164472.png" alt="" loading="lazy"><br>
+继续<code>next</code><br>
+最后等待几分钟就安装完成了。</p>
+<h1 id="2-验证">2. 验证</h1>
+<p>打开power shell或者其他命令行终端，输入<code>node -v</code>来查看node的版本，如果输出一个版本号即说明node.js已经安装成功了。</p>
+<h1 id="3-使用-cnpm-作为包管理器">3. 使用 cnpm 作为包管理器</h1>
+<p>npm是node.js的包管理器，但由于npm默认的源是在国外的，访问速度实在感人，所以在这里我建议你使用 <a href="https://developer.aliyun.com/mirror/NPM?from=tnpm">淘宝npm镜像</a> 来进行包管理。在命令行输入：</p>
+<p><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></p>
+<p>即可自动安装cnpm。</p>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://kingsingledog.github.io/post/python3-shi-xian-fan-yi/" class="post-title gt-a-link">
+                    Python 翻译文本
+                </a>
             </div>
         
-    </div>
-</div>
-        <div class="pagination-container">
-    
-    
-</div>
+
+        
 
         <div class="site-footer gt-c-content-color-first">
     <div class="slogan gt-c-content-color-first">今日天气唔错喔！</div>
@@ -177,6 +177,7 @@
 <script>
     hljs.initHighlightingOnLoad()
 </script>
+
 
     </div>
 </div>

@@ -4,7 +4,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>杂函 | Shello World</title>
-<link rel="shortcut icon" href="https://kingsingledog.github.io//favicon.ico?v=1587124566391">
+<link rel="shortcut icon" href="https://kingsingledog.github.io//favicon.ico?v=1587552463694">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="https://kingsingledog.github.io//styles/main.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -152,6 +152,13 @@ $ pqi use aliyuan # 使用源
 </code></pre>
 <p>更改执行策略，然后输入<code>Y</code>确认即可。</p>
 <p>来自：<a href="https://www.jb51.net/article/95022.htm">PowerShell因为在此系统中禁止执行脚本的解决方法</a></p>
+<h2 id="9-uwp应用-loopback-权限">9. UWP应用 loopback 权限</h2>
+<p>解锁UWP应用 loopback 权限(访问本机)</p>
+<pre><code>checknetisolation loopbackexempt -a -n=&quot;1F8B0F94.122165AE053F_j2p0p5q0044a6&quot;
+</code></pre>
+<p>如果你取消解锁，即恢复原状，那么请执行：</p>
+<pre><code>checknetisolation loopbackexempt -d -n=&quot;1F8B0F94.122165AE053F_j2p0p5q0044a6&quot;
+</code></pre>
 
                 </div>
             </article>
