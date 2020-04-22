@@ -37,7 +37,24 @@
 <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.25/CDN/js/love.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+    <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+    
         
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
                     <style>
                         .Card-certify {
                             color: #0091e4 !important;
@@ -137,13 +154,13 @@
                     
             </ul>
         </nav>
-        <form id="gridea-search-form" class="searchform" data-update="1587568003682" action="/search/index.html">
+        <form id="gridea-search-form" class="searchform" data-update="1587569401747" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
     </div>
     <div id="mobile-menu">
-        <form id="gridea-search-form" class="mobile-searchform" data-update="1587568003682" action="/search/index.html">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1587569401747" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
@@ -223,6 +240,17 @@
             <div id="sidebar">
     <ul>
         
+            <li class="lite-item">
+                <header class="lite-item-header">
+                    <h3 class="sidebar-default-icon lite-item-title"><i class="Card Card-hitokoto"></i>&nbsp;&#x4E00;&#x8A00;</h3>
+                </header>
+                <div class="textwidget">
+                    <p>
+                        <b id="hitokoto"></b>
+                    </p>
+                </div>
+            </li>
+            
                 <li class="lite-item">
                     <header class="lite-item-header">
                         <h3 class="sidebar-default-icon lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
@@ -256,14 +284,59 @@
                     </div>
                 </li>
                 
+                    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/APlayer.min.js"></script>
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+                    <div id="player"></div>
+                    
+                        <li class="lite-item">
+                            <header class="lite-item-header">
+                                <h3 class="sidebar-default-icon lite-item-title">
+                                    &#x1F3B5;&#x97F3;&#x4E50;
+                                </h3>
+                            </header>
+                            <div class="textwidget">
+                                <p>
+                                    <div id="player_box"></div>
+                                </p>
+                            </div>
+                        </li>
+                        
+                            <script>
+                                function LoadPlayer() {
+                                    var music_array = [];
+                                    
+                                    music_array.push({
+                                        name: '失波 (Lost Frequencis)',
+                                        url: 'http://m701.music.126.net/20200422234712/a16971a128ed6ad4255764cb5f3ce20d/jdyyaac/0f0b/5508/000c/8ad7ece5c4bb89e3f97d7f1ea2c03444.m4a',
+                                        artist: 'R7CKY',
+                                        cover: 'http://p1.music.126.net/STfhMRMhE0exGT4Mm8dSYg==/18258490091275454.jpg?imageView&amp;thumbnail=360y360&amp;quality=75&amp;tostatic=0',
+                                    });
+                                    
+                                    
+                                    const ap = new APlayer({
+                                        container: document.getElementById('player_box'),
+                                        audio: music_array
+                                    });
+                                    
+                                }
+                                LoadPlayer();
+                            </script>
+                            
                                 
                                     
+                                        
+                                                
                                                     <li class="lite-item">
                                                         <header class="lite-item-header">
                                                             <h3 class="sidebar-default-icon lite-item-title">&#x1F468;&#x200D;&#x1F4BB;&#x53CB;&#x94FE;</h3>
                                                         </header>
                                                         <div class="textwidget">
                                                             
+                                                                
+                                                                    <p onclick="javascript:top.location='https://blog.itjoker.cn'"><span class="link_a"><a href="https://blog.itjoker.cn" alt="ITJoker ">ITJoker -ITJoker&#39;s Blog</a></span></p>
+
+                                                                    
+                                                                        
                                                         </div>
                                                     </li>
     </ul>
@@ -282,19 +355,10 @@
                 </div>
                 <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/time.min.js"></script>
                 <script>
-                    setInterval(show_date_time, 1000, '');
+                    setInterval(show_date_time, 1000, '2020-1-1');
                 </script>
                 
                     
-                        <div style="width:300px;margin:0 auto; padding:0px 0;">
-                            <a target="_blank" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
-                                <img src="https://yanxuan.nosdn.127.net/b610ced5ac6a0e25cf6edf5606c69775.png" style="float:left;">
-                                <p id="icpinfo" style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px;">
-                                    
-                                </p>
-                            </a>
-                        </div>
-                        
                             &#x7248;&#x6743;&#x6240;&#x6709; &copy;
                             <span class="my-face"><script>
                         var date = new Date();
@@ -304,12 +368,12 @@
                             <a href="https://kingsingledog.github.io/">
                                 Shello World
                             </a>&nbsp;|&nbsp;Powered by
-                            <a href="" target="_blank">
-                                
+                            <a href="https://github.com/" target="_blank">
+                                Github
                             </a>
     </div>
     <div id='UpdateTime' style='display:none'>
-        1587568003682
+        1587569401747
     </div>
     <script>
         var titleTime;
@@ -319,6 +383,8 @@
             }, 2E3))
         });
         var OriginTitile = document.title;
+        
+        App.hitokoto();
         
         App.clearLog();
         App.outputlog();
