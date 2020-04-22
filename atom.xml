@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsingledog.github.io/</id>
     <title>Shello World</title>
-    <updated>2020-04-22T10:47:51.170Z</updated>
+    <updated>2020-04-22T10:51:51.809Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsingledog.github.io/"/>
     <link rel="self" href="https://kingsingledog.github.io/atom.xml"/>
@@ -16,9 +16,9 @@
         <link href="https://kingsingledog.github.io/post/an-zhuang-nodejs/">
         </link>
         <updated>2020-04-22T10:44:16.000Z</updated>
-        <summary type="html"><![CDATA[<p>如何安装 Node.js</p>
+        <summary type="html"><![CDATA[<p>🚗 从这里开始你的 Node.js 之旅！</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>如何安装 Node.js</p>
+        <content type="html"><![CDATA[<p>🚗 从这里开始你的 Node.js 之旅！</p>
 <!-- more -->
 <h1 id="0-下载">0. 下载</h1>
 <p>链接：</p>
@@ -176,6 +176,7 @@ def translateGoogle(text, f='ja', t='zh-cn'):
 <p>总结起来就是，你可以使用node.js调用wechaty库来做出你自己的机器人。值得注意的是，当前微信web协议不支持登录2017年后注册的微信，如果你的微信是2017年后才注册的，请去找ipad协议的api。</p>
 <p>既然要用到node.js和wechaty库，那我们首先要做的就是安装它们。</p>
 <h1 id="1-安装-nodejs">1. 安装 Node.js</h1>
+<p>👉 <a href="https://kingsingledog.github.io/post/an-zhuang-nodejs/">安装 Node.js</a></p>
 <h1 id="2-使用-wechaty">2. 使用 wechaty</h1>
 <p>如官方介绍所言，构建一个机器人只需要简单几步：</p>
 <h2 id="21-初始化环境">2.1 初始化环境</h2>
