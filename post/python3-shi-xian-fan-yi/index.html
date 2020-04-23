@@ -154,13 +154,13 @@
                     
             </ul>
         </nav>
-        <form id="gridea-search-form" class="searchform" data-update="1587612553244" action="/search/index.html">
+        <form id="gridea-search-form" class="searchform" data-update="1587617452363" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
     </div>
     <div id="mobile-menu">
-        <form id="gridea-search-form" class="mobile-searchform" data-update="1587612553244" action="/search/index.html">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1587617452363" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
@@ -223,7 +223,7 @@
                                                     <span class="post-edit"></span></div>
                                         </div>
                                         <div class="post-relative">
-                                            <img alt="Shello" src="https://kingsingledog.github.io//images/avatar.png?v=1587612553244" srcset="https://kingsingledog.github.io//images/avatar.png?v=1587612553244" class="avatar avatar-100 photo" width="100" height="100">
+                                            <img alt="Shello" src="https://kingsingledog.github.io//images/avatar.png?v=1587617452363" srcset="https://kingsingledog.github.io//images/avatar.png?v=1587617452363" class="avatar avatar-100 photo" width="100" height="100">
                                             <span class="post-type-author"><a href="https://kingsingledog.github.io/" title="由Shello发布" rel="author">Shello<i class="Card Card-certify"></i></a></span>
                                             <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-04-17</span>
                                         </div>
@@ -235,10 +235,10 @@
 <!-- more -->
 <h2 id="0-调用-googletrans-库">0. 调用 googletrans 库</h2>
 <h3 id="01-安装">0.1 安装：</h3>
-<pre><code>$ pip install googletrans
+<pre><code class="language-bash">$ pip install googletrans
 </code></pre>
 <h3 id="02-调用">0.2 调用：</h3>
-<pre><code>from googletrans import Translator
+<pre><code class="language-python">from googletrans import Translator
 
 # 中 -&gt; 英
 print(translator_google.translate('你好，世界！', dest='en').text)
@@ -258,7 +258,7 @@ print(translator_google.translate('Hello World!', dest='zh-CN').text)
 <h2 id="1-使用网页接口">1. 使用网页接口</h2>
 <p>这种方法主要是调用百度等平台的翻译接口，需要自行去注册</p>
 <h3 id="11-导入模块">1.1 导入模块</h3>
-<pre><code>import re
+<pre><code class="language-python">import re
 import urllib.parse, urllib.request
 import hashlib
 import urllib
@@ -267,7 +267,7 @@ import json
 import time
 </code></pre>
 <h3 id="12-百度翻译">1.2 百度翻译</h3>
-<pre><code>appid = 'your_appid'
+<pre><code class="language-python">appid = 'your_appid'
 secretKey = 'your_secretKey'
 url_baidu = 'http://api.fanyi.baidu.com/api/trans/vip/translate'
 
@@ -285,7 +285,7 @@ def translateBaidu(text, f='ja', t='zh'):
 </code></pre>
 <p>参数：text--待翻文本，f--初始语言，t--目标语言，后面方法类似。</p>
 <h3 id="13-有道翻译">1.3 有道翻译</h3>
-<pre><code>url_youdao = 'http://fanyi.youdao.com/translate?smartresult=dict&amp;smartresult=rule&amp;smartresult=ugc&amp;sessionFrom=' \
+<pre><code class="language-python">url_youdao = 'http://fanyi.youdao.com/translate?smartresult=dict&amp;smartresult=rule&amp;smartresult=ugc&amp;sessionFrom=' \
       'http://www.youdao.com/'
 dict = {}
 dict['type'] = 'AUTO'
@@ -308,7 +308,7 @@ def translateYoudao(text):
 </code></pre>
 <p>参数主要由字典dict指定，发现没有地方可以指定语言（可能是我没找到），测试结果是不管输入什么语言的文本，输出均是中文。</p>
 <h3 id="14-谷歌翻译">1.4 谷歌翻译</h3>
-<pre><code>url_google = 'http://translate.google.cn'
+<pre><code class="language-python">url_google = 'http://translate.google.cn'
 reg_text = re.compile(r'(?&lt;=TRANSLATED_TEXT=).*?;')
 user_agent = r'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) ' \
                  r'Chrome/44.0.2403.157 Safari/537.36'
@@ -383,10 +383,10 @@ def translateGoogle(text, f='ja', t='zh-cn'):
     <i class="post-share"></i>
     <span>&#x5206;&#x4EAB;:</span>
                 <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://kingsingledog.github.io/post/python3-shi-xian-fan-yi/"><i class="fa fa-qrcode"></i></a>
-                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://kingsingledog.github.io/post/python3-shi-xian-fan-yi/&sharesource=qzone&title=Python 翻译文本&pics=https://kingsingledog.github.io//images/avatar.png?v=1587612553244&summary=&lt;p&gt;🐍 Python 翻译文本的几种方案&lt;/p&gt;
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://kingsingledog.github.io/post/python3-shi-xian-fan-yi/&sharesource=qzone&title=Python 翻译文本&pics=https://kingsingledog.github.io//images/avatar.png?v=1587617452363&summary=&lt;p&gt;🐍 Python 翻译文本的几种方案&lt;/p&gt;
 "><i class="fa fa-qq"></i></a>
                 <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://kingsingledog.github.io/post/python3-shi-xian-fan-yi/&sharesource=weibo&title=Python 翻译文本 + " - " + &lt;p&gt;🐍 Python 翻译文本的几种方案&lt;/p&gt;
-&pic="https://kingsingledog.github.io//images/avatar.png?v=1587612553244"><i class="fa fa-weibo "></i></a>
+&pic="https://kingsingledog.github.io//images/avatar.png?v=1587617452363"><i class="fa fa-weibo "></i></a>
                 </span>
                 
                                             
@@ -399,7 +399,7 @@ def translateGoogle(text, f='ja', t='zh-cn'):
     appKey: '4H17OrBxCh0k73STSyXRMElO',
     pageSize: 10,
     notify: true,
-    avatar: 'mp',
+    avatar: 'monsterid',
     verify: true,
     placeholder: '来都来了，不妨评论一下',
     visitor: true,
@@ -556,7 +556,7 @@ def translateGoogle(text, f='ja', t='zh-cn'):
                             </a>
     </div>
     <div id='UpdateTime' style='display:none'>
-        1587612553244
+        1587617452363
     </div>
     <script>
         var titleTime;

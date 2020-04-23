@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kingsingledog.github.io/</id>
     <title>Shello</title>
-    <updated>2020-04-23T03:29:16.413Z</updated>
+    <updated>2020-04-23T04:50:54.577Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kingsingledog.github.io/"/>
     <link rel="self" href="https://kingsingledog.github.io/atom.xml"/>
@@ -40,7 +40,8 @@
 <p>打开power shell或者其他命令行终端，输入<code>node -v</code>来查看node的版本，如果输出一个版本号即说明node.js已经安装成功了。</p>
 <h1 id="3-使用-cnpm-作为包管理器">3. 使用 cnpm 作为包管理器</h1>
 <p>npm是node.js的包管理器，但由于npm默认的源是在国外的，访问速度实在感人，所以在这里我建议你使用 <a href="https://developer.aliyun.com/mirror/NPM?from=tnpm">淘宝npm镜像</a> 来进行包管理。在命令行输入：</p>
-<p><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></p>
+<pre><code class="language-shell">npm install -g cnpm --registry=https://registry.npm.taobao.org
+</code></pre>
 <p>即可自动安装cnpm。</p>
 ]]></content>
     </entry>
@@ -56,10 +57,10 @@
 <!-- more -->
 <h2 id="0-调用-googletrans-库">0. 调用 googletrans 库</h2>
 <h3 id="01-安装">0.1 安装：</h3>
-<pre><code>$ pip install googletrans
+<pre><code class="language-bash">$ pip install googletrans
 </code></pre>
 <h3 id="02-调用">0.2 调用：</h3>
-<pre><code>from googletrans import Translator
+<pre><code class="language-python">from googletrans import Translator
 
 # 中 -&gt; 英
 print(translator_google.translate('你好，世界！', dest='en').text)
@@ -79,7 +80,7 @@ print(translator_google.translate('Hello World!', dest='zh-CN').text)
 <h2 id="1-使用网页接口">1. 使用网页接口</h2>
 <p>这种方法主要是调用百度等平台的翻译接口，需要自行去注册</p>
 <h3 id="11-导入模块">1.1 导入模块</h3>
-<pre><code>import re
+<pre><code class="language-python">import re
 import urllib.parse, urllib.request
 import hashlib
 import urllib
@@ -88,7 +89,7 @@ import json
 import time
 </code></pre>
 <h3 id="12-百度翻译">1.2 百度翻译</h3>
-<pre><code>appid = 'your_appid'
+<pre><code class="language-python">appid = 'your_appid'
 secretKey = 'your_secretKey'
 url_baidu = 'http://api.fanyi.baidu.com/api/trans/vip/translate'
 
@@ -106,7 +107,7 @@ def translateBaidu(text, f='ja', t='zh'):
 </code></pre>
 <p>参数：text--待翻文本，f--初始语言，t--目标语言，后面方法类似。</p>
 <h3 id="13-有道翻译">1.3 有道翻译</h3>
-<pre><code>url_youdao = 'http://fanyi.youdao.com/translate?smartresult=dict&amp;smartresult=rule&amp;smartresult=ugc&amp;sessionFrom=' \
+<pre><code class="language-python">url_youdao = 'http://fanyi.youdao.com/translate?smartresult=dict&amp;smartresult=rule&amp;smartresult=ugc&amp;sessionFrom=' \
       'http://www.youdao.com/'
 dict = {}
 dict['type'] = 'AUTO'
@@ -129,7 +130,7 @@ def translateYoudao(text):
 </code></pre>
 <p>参数主要由字典dict指定，发现没有地方可以指定语言（可能是我没找到），测试结果是不管输入什么语言的文本，输出均是中文。</p>
 <h3 id="14-谷歌翻译">1.4 谷歌翻译</h3>
-<pre><code>url_google = 'http://translate.google.cn'
+<pre><code class="language-python">url_google = 'http://translate.google.cn'
 reg_text = re.compile(r'(?&lt;=TRANSLATED_TEXT=).*?;')
 user_agent = r'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) ' \
                  r'Chrome/44.0.2403.157 Safari/537.36'
@@ -180,27 +181,27 @@ def translateGoogle(text, f='ja', t='zh-cn'):
 <h1 id="2-使用-wechaty">2. 使用 wechaty</h1>
 <p>如官方介绍所言，构建一个机器人只需要简单几步：</p>
 <h2 id="21-初始化环境">2.1 初始化环境</h2>
-<pre><code>npm init
+<pre><code class="language-shell">npm init
 </code></pre>
 <p>或</p>
-<pre><code>cnpm init
+<pre><code class="language-shell">cnpm init
 </code></pre>
 <blockquote>
 <p>注：初次使用cnpm可能会报“因为在此系统中禁止执行脚本”错误，解决方法参见<a href="https://kingsingledog.github.io/post/za-han/#powershell-%E5%9B%A0%E4%B8%BA%E5%9C%A8%E6%AD%A4%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%A6%81%E6%AD%A2%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95">PowerShell “因为在此系统中禁止执行脚本”的解决方法</a>，解决后重新执行<code>cnpm init</code>命令即可。</p>
 </blockquote>
 <p>接着会要求你输入项目名称和作者等信息，没有特殊要求的话可以一路回车跳过。</p>
 <h2 id="22-安装wechaty">2.2 安装wechaty</h2>
-<pre><code>npm install wechaty
+<pre><code class="language-shell">npm install wechaty
 </code></pre>
 <p>或</p>
-<pre><code>cnpm install wechaty
+<pre><code class="language-shell">cnpm install wechaty
 </code></pre>
 <h2 id="23-创建js文件">2.3 创建js文件</h2>
-<pre><code>touch robot.js
+<pre><code class="language-shell">touch robot.js
 </code></pre>
 <h3 id="24-写入代码">2.4 写入代码</h3>
 <p>在<code>robot.js</code>文件中写入以下代码：</p>
-<pre><code>const { Wechaty } = require('wechaty') 
+<pre><code class="language-js">const { Wechaty } = require('wechaty') 
 // import { Wechaty } from 'wechaty'
 
 Wechaty.instance() // Global Instance
@@ -210,7 +211,8 @@ Wechaty.instance() // Global Instance
     .start()
 </code></pre>
 <h3 id="25-运行代码">2.5 运行代码</h3>
-<p><code>node robot.js</code></p>
+<pre><code class="language-shell">node robot.js
+</code></pre>
 <h3 id="26-修改代码">2.6 修改代码</h3>
 <p>如果以上步骤你都运行成功的话，那你现在应该会很想修改代码来实现自己的机器人了，在这里附上几个你可能用得上的链接：</p>
 <blockquote>
@@ -232,7 +234,7 @@ Wechaty.instance() // Global Instance
         <content type="html"><![CDATA[<p>👾 git常用到的命令</p>
 <!-- more -->
 <h2 id="无脑操作新手专属">无脑操作（新手专属）</h2>
-<pre><code># 克隆仓库到本地
+<pre><code class="language-shell"># 克隆仓库到本地
 git clone [仓库地址]
 
 # 打开本地仓库
@@ -252,14 +254,14 @@ git push -u origin master
 </code></pre>
 <p>下面的是更多的一些命令，事实上，你只要在命令行输入<code>git</code>就可以查看全部git命令了</p>
 <h2 id="新建仓库">新建仓库</h2>
-<pre><code># 在本地创建一个名为[项目名称]的仓库
+<pre><code class="language-shell"># 在本地创建一个名为[项目名称]的仓库
 git init [项目名称]
 
 # 克隆仓库到本地
 git clone [仓库链接]
 </code></pre>
 <h2 id="配置">配置</h2>
-<pre><code># 显示配置列表
+<pre><code class="language-shell"># 显示配置列表
 git config --list
 
 # 修改配置中的用户名
@@ -269,7 +271,7 @@ git config [--global] user.name &quot;[用户名]&quot;
 git config [--global] user.email &quot;[邮箱地址]&quot;
 </code></pre>
 <h2 id="增加删除文件">增加/删除文件</h2>
-<pre><code># 添加当前工作区的全部文件到暂存区
+<pre><code class="language-shell"># 添加当前工作区的全部文件到暂存区
 git add --all
 
 # 添加指定文件到暂存区
@@ -535,7 +537,7 @@ git mv [原文件] [移动后的文件]
 <li>打开“此电脑”：<strong>Win + E</strong></li>
 </ul>
 <h2 id="2-pip-更换下载源">2. pip 更换下载源</h2>
-<pre><code>$ pip install pqi #安装 pqi
+<pre><code class="language-shell">$ pip install pqi #安装 pqi
 $ pqi ls # 显示全部源
 $ pqi use aliyuan # 使用源
 </code></pre>
@@ -546,7 +548,7 @@ $ pqi use aliyuan # 使用源
 然后回车进入即可看见该网站能用的工具了。</p>
 <p>详细用法请参考：<a href="https://wanneng.run/cn/">万能命令</a></p>
 <h2 id="4-linux-登录问候语">4. Linux 登录问候语</h2>
-<pre><code>$ vi /etc/motd
+<pre><code class="language-shell">$ vi /etc/motd
 </code></pre>
 <p>来自：<a href="https://blog.csdn.net/rrlyrstar/article/details/79226190">Linux登录问候语</a></p>
 <h2 id="5-linux-开机启动脚本">5. Linux 开机启动脚本</h2>
@@ -565,16 +567,16 @@ $ pqi use aliyuan # 使用源
 <p>来自：<a href="https://www.zhihu.com/question/23149991/answer/988550313">知乎：怎么能做出一台在 5 秒内解开魔方的机器人 ？</a></p>
 <h2 id="8-powershell-因为在此系统中禁止执行脚本的解决方法">8. PowerShell “因为在此系统中禁止执行脚本”的解决方法</h2>
 <p>以管理员身份运行powershell，然后执行以下命令：</p>
-<pre><code>set-ExecutionPolicy RemoteSigned
+<pre><code class="language-shell">set-ExecutionPolicy RemoteSigned
 </code></pre>
 <p>更改执行策略，然后输入<code>Y</code>确认即可。</p>
 <p>来自：<a href="https://www.jb51.net/article/95022.htm">PowerShell因为在此系统中禁止执行脚本的解决方法</a></p>
 <h2 id="9-uwp应用-loopback-权限">9. UWP应用 loopback 权限</h2>
 <p>解锁UWP应用 loopback 权限(访问本机)</p>
-<pre><code>checknetisolation loopbackexempt -a -n=&quot;1F8B0F94.122165AE053F_j2p0p5q0044a6&quot;
+<pre><code class="language-shell">checknetisolation loopbackexempt -a -n=&quot;1F8B0F94.122165AE053F_j2p0p5q0044a6&quot;
 </code></pre>
 <p>如果你取消解锁，即恢复原状，那么请执行：</p>
-<pre><code>checknetisolation loopbackexempt -d -n=&quot;1F8B0F94.122165AE053F_j2p0p5q0044a6&quot;
+<pre><code class="language-shell">checknetisolation loopbackexempt -d -n=&quot;1F8B0F94.122165AE053F_j2p0p5q0044a6&quot;
 </code></pre>
 ]]></content>
     </entry>
