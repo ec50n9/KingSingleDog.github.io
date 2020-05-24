@@ -11,13 +11,13 @@
 -->
 
 <title>
-    Shello
+    楸
 </title>
 <!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
 <meta http-equiv="x-dns-prefetch-control" content="on">
 <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-<meta name="author" content="Shello">
+<meta name="author" content="楸">
 <meta name="description" content="有些事情，现在不做，一辈子都不会再做了。">
 <meta name="keywords" content="">
 <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
@@ -149,7 +149,7 @@
     <div id="pc-menu">
         <a id="menu-bar" class="Card Card-menu"></a>
         <a id="menu-title" href="https://kingsingledog.github.io/">
-            Shello
+            楸
         </a>
         <nav id="menu-main" class="menu-main">
             <ul>
@@ -180,13 +180,13 @@
                     
             </ul>
         </nav>
-        <form id="gridea-search-form" class="searchform" data-update="1590302281007" action="/search/index.html">
+        <form id="gridea-search-form" class="searchform" data-update="1590309474915" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
     </div>
     <div id="mobile-menu">
-        <form id="gridea-search-form" class="mobile-searchform" data-update="1590302281007" action="/search/index.html">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1590309474915" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
@@ -242,36 +242,110 @@
                 </div>
             </li>
             
+                <!--
                 <li class="lite-item">
                     <header class="lite-item-header">
                         <h3 class="sidebar-default-icon lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
                     </header>
                     <div class="textwidget">
                         
-                            <a href="https://kingsingledog.github.io/tag/wGGGY_QqB/" class="tag-cloud-link " style="font-size: 12px;margin: 5px; padding: 2px;">
-                                <i class="fa fa-tags" aria-hidden="true">Node.js</i>
+                            <a href="" class="tag-cloud-link " style="font-size: 12px;margin: 5px; padding: 2px;">
+                                <i class="fa fa-tags" aria-hidden="true"></i>
                             </a>
                             
-                            <a href="https://kingsingledog.github.io/tag/-qFZQx_Pf/" class="tag-cloud-link " style="font-size: 12px;margin: 5px; padding: 2px;">
-                                <i class="fa fa-tags" aria-hidden="true">微信</i>
-                            </a>
-                            
-                            <a href="https://kingsingledog.github.io/tag/MJwHwUwwcc/" class="tag-cloud-link " style="font-size: 12px;margin: 5px; padding: 2px;">
-                                <i class="fa fa-tags" aria-hidden="true">自动化</i>
-                            </a>
-                            
-                            <a href="https://kingsingledog.github.io/tag/NfG2-3M0yA/" class="tag-cloud-link " style="font-size: 12px;margin: 5px; padding: 2px;">
-                                <i class="fa fa-tags" aria-hidden="true">教程</i>
-                            </a>
-                            
-                            <a href="https://kingsingledog.github.io/tag/JIqSdGjYH/" class="tag-cloud-link " style="font-size: 12px;margin: 5px; padding: 2px;">
-                                <i class="fa fa-tags" aria-hidden="true">笔记</i>
-                            </a>
-                            
-                            <a href="https://kingsingledog.github.io/tag/V_XX7a4vr/" class="tag-cloud-link " style="font-size: 12px;margin: 5px; padding: 2px;">
-                                <i class="fa fa-tags" aria-hidden="true">工具</i>
-                            </a>
-                            
+                    </div>
+                </li>-->
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="sidebar-default-icon lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        <div id='tags' style="height: auto;width: 360;"></div>
+                        <script src="https://kingsingledog.github.io//media/js/svg3dtagcloud.min.js"></script>
+                        <script>
+                            $(document).ready(function() {
+                                var entries = ([
+                                    
+                                     {
+                                        label: '🏷Node.js',
+                                        url: 'https://kingsingledog.github.io/tag/wGGGY_QqB/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷微信',
+                                        url: 'https://kingsingledog.github.io/tag/-qFZQx_Pf/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷自动化',
+                                        url: 'https://kingsingledog.github.io/tag/MJwHwUwwcc/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷教程',
+                                        url: 'https://kingsingledog.github.io/tag/NfG2-3M0yA/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷笔记',
+                                        url: 'https://kingsingledog.github.io/tag/JIqSdGjYH/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷工具',
+                                        url: 'https://kingsingledog.github.io/tag/V_XX7a4vr/',
+                                        target: '_button'
+                                    }
+                                    
+                                    
+                                ]);
+                                var settings = {
+                                    entries: entries, //数据
+                                    width: 300, //宽度
+                                    height: 300, //高度
+                                    radius: '5%',
+                                    radiusMin: 75,
+                                    bgDraw: true, //是否显示背景
+                                    bgColor: '#fff', //背景颜色
+                                    opacityOver: 1.00,
+                                    opacityOut: 0.05,
+                                    opacitySpeed: 6,
+                                    fov: 360,
+                                    speed: 0.3, //旋转的速度
+                                    fontFamily: 'Oswald, Arial, sans-serif',
+                                    fontSize: '18', //默认字体大小
+                                    fontColor: '#666', //默认字体颜色
+                                    fontWeight: 'normal', //bold
+                                    fontStyle: 'normal', //italic 
+                                    fontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    fontToUpperCase: true,
+                                    tooltipFontFamily: 'Oswald, Arial, sans-serif',
+                                    tooltipFontSize: '16',
+                                    tooltipFontColor: 'red',
+                                    tooltipFontWeight: 'normal', //bold
+                                    tooltipFontStyle: 'normal', //italic 
+                                    tooltipFontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    tooltipFontToUpperCase: false,
+                                    tooltipTextAnchor: 'left',
+                                    tooltipDiffX: 0,
+                                    tooltipDiffY: 5
+
+                                };
+
+                                //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+                                $('#tags').svg3DTagCloud(settings);
+                            });
+                        </script>
                     </div>
                 </li>
                 
@@ -401,14 +475,14 @@
                     </script>
                    </span>
                             <a href="https://kingsingledog.github.io/">
-                                Shello
+                                楸
                             </a>&nbsp;|&nbsp;Powered by
                             <a href="https://github.com/" target="_blank">
                                 Github
                             </a>
     </div>
     <div id='UpdateTime' style='display:none'>
-        1590302281007
+        1590309474915
     </div>
     <script>
         var titleTime;
@@ -423,7 +497,7 @@
         
         App.clearLog();
         App.outputlog();
-        var logo = '%cShello\'%cBlog';
+        var logo = '%c楸\'%cBlog';
         console.info(
             logo,
             'color: #ffffff; background: #000000; padding:5px 10px 5px 10px;font-size:40px;border-radius:12px 0 0 12px;', 'color: #000000; background: #FE9A00; padding:5px 10px;font-size:40px;border-radius:0 12px 12px 0;'
