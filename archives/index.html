@@ -1,566 +1,235 @@
-<!DOCTYPE html>
-<html id="bg">
-
+<html>
 <head>
-    <meta charset="utf-8" />
-<!--
-    * @Theme Card
-    *
-    * @author admin@itjoker.cn
-    * @link https://blog.itjoker.cn
--->
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>楸</title>
+<link rel="shortcut icon" href="https://kingsingledog.github.io//favicon.ico?v=1590901952083">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="https://kingsingledog.github.io//styles/main.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<title>
-    楸
-</title>
-<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-<meta http-equiv="x-dns-prefetch-control" content="on">
-<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-<meta name="author" content="楸">
-<meta name="description" content="有些事情，现在不做，一辈子都不会再做了。">
-<meta name="keywords" content="">
-<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/Card/prism.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.25/CDN/css/Card/prism.min.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css">
-<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.28/CDN/js/Card/script.js"></script>
-<!--<script async src="https://kingsingledog.github.io//media/js/script.min.js"></script>-->
-<!--<link rel="stylesheet" href="https://kingsingledog.github.io//media/css/main.min.css" />-->
-<link rel="stylesheet" href="https://kingsingledog.github.io//styles/main.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.26/CDN/css/Card/main.min.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.25/CDN/css/Card/iconfont.css" />
-<!--link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_410989_wuhl0k5ojvf.css" /-->
-<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.25/CDN/js/love.min.js"></script>
-<script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/go.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 
-        
-            <script>
-                (function() {
-                    var bp = document.createElement('script');
-                    var curProtocol = window.location.protocol.split(':')[0];
-                    if (curProtocol === 'https') {
-                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-                    } else {
-                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-                    }
-                    var s = document.getElementsByTagName("script")[0];
-                    s.parentNode.insertBefore(bp, s);
-                })();
-            </script>
-            
-                    <style>
-                        .Card-certify {
-                            color: #0091e4 !important;
-                        }
-                        
-                        #foot {
-                            color: #000;
-                        }
-                        
-                        #menu-item:hover {
-                            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-                            border-bottom-color: rgba(0, 0, 0, .6);
-                        }
-                        
-                        .gray {
-                            -webkit-filter: grayscale(100%);
-                            /* webkit */
-                            -moz-filter: grayscale(100%);
-                            /*firefox*/
-                            -ms-filter: grayscale(100%);
-                            /*ie9*/
-                            -o-filter: grayscale(100%);
-                            /*opera*/
-                            filter: grayscale(100%);
-                            filter: progid: DXImageTransform.Microsoft.BasicImage(grayscale=1);
-                            filter: gray;
-                            /*ie9- */
-                        }
-                        
-                        .lite-item,
-                        #header {
-                            opacity: 1;
-                        }
-                        
-                        #span_btn:hover {
-                            transition: all .3s ease;
-                            color: #fff;
-                            background: #0092ee;
-                            /*linear-gradient( rgb(138, 160, 255) 30%, rgb(90, 140, 250) 70%);*/
-                        }
-                        
-                        #span_btn {
-                            font-size: 14px;
-                        }
-                        
-                        .link_a:hover {
-                            margin-top: 10px;
-                            margin-bottom: 10px;
-                            color: #fff;
-                            border-left: 8px solid #0092eeee;
-                            padding: 5px;
-                            transition: all .3s ease;
-                        }
-                        
-                        html {
-                            width: 100%;
-                            height: 100%;
-                            background-attachment: fixed;
-                            background-repeat: no-repeat;
-                        }
-                    </style>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
 </head>
-
 <body>
-    <header id="header">
-    <div id="pc-menu">
-        <a id="menu-bar" class="Card Card-menu"></a>
-        <a id="menu-title" href="https://kingsingledog.github.io/">
+<div class="main gt-bg-theme-color-first">
+    <div class="main-content">
+        <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
             楸
-        </a>
-        <nav id="menu-main" class="menu-main">
-            <ul>
-                
-                    <li id="menu-item" class="menu-item">
-                        <a href="/">
-                            🎈首页
-                        </a>
-                    </li>
-                    
-                    <li id="menu-item" class="menu-item">
-                        <a href="/archives">
-                            📕归档
-                        </a>
-                    </li>
-                    
-                    <li id="menu-item" class="menu-item">
-                        <a href="/tags">
-                            🏷标签
-                        </a>
-                    </li>
-                    
-                    <li id="menu-item" class="menu-item">
-                        <a href="/post/about">
-                            🙍‍♂️关于
-                        </a>
-                    </li>
-                    
-            </ul>
-        </nav>
-        <form id="gridea-search-form" class="searchform" data-update="1590901110658" action="/search/index.html">
-            <i class="Card Card-search"></i>
-            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
-        </form>
-    </div>
-    <div id="mobile-menu">
-        <form id="gridea-search-form" class="mobile-searchform" data-update="1590901110658" action="/search/index.html">
-            <i class="Card Card-search"></i>
-            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
-        </form>
-        <nav class="menu">
-            <ul style="list-style: none;">
-                
-                    <li class="page_item page-item-2">
-                        <a href="/">
-                            🎈首页
-                        </a>
-                    </li>
-                    
-                    <li class="page_item page-item-2">
-                        <a href="/archives">
-                            📕归档
-                        </a>
-                    </li>
-                    
-                    <li class="page_item page-item-2">
-                        <a href="/tags">
-                            🏷标签
-                        </a>
-                    </li>
-                    
-                    <li class="page_item page-item-2">
-                        <a href="/post/about">
-                            🙍‍♂️关于
-                        </a>
-                    </li>
-                    
-            </ul>
-        </nav>
-    </div>
-</header>
-        <div id="main">
-            <div id="main-part">
-                <ul class="posts-list">
-                    <li class="lite-item">
-                        <article class="post post-type">
-                            <div class="post-main post-type-main">
-                                <div class="post-content">
-                                    <div class="post-content-real">
-                                        
-                                            
-                                                <h3>
-                                                    2020
-                                                </h3>
-                                                
-                                                    
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://kingsingledog.github.io/post/xin-qing-sui-bi/">
-                                                                心情随笔
-                                                            </a>
-                                                            <span class="publish-time"> - <i class="fa fa-calendar"aria-hidden="true"></i> 2020-05-14</span></article>
-                                                        
-                                                            
-                                                    
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://kingsingledog.github.io/post/an-zhuang-nodejs/">
-                                                                安装 Node.js
-                                                            </a>
-                                                            <span class="publish-time"> - <i class="fa fa-calendar"aria-hidden="true"></i> 2020-04-22</span></article>
-                                                        
-                                                            
-                                                    
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://kingsingledog.github.io/post/python3-shi-xian-fan-yi/">
-                                                                Python 翻译文本
-                                                            </a>
-                                                            <span class="publish-time"> - <i class="fa fa-calendar"aria-hidden="true"></i> 2020-04-17</span></article>
-                                                        
-                                                            
-                                                    
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://kingsingledog.github.io/post/shi-yong-wechaty-lai-gou-jian-wei-xin-ji-qi-ren/">
-                                                                使用 wechaty 来构建微信机器人
-                                                            </a>
-                                                            <span class="publish-time"> - <i class="fa fa-calendar"aria-hidden="true"></i> 2020-04-10</span></article>
-                                                        
-                                                            
-                                                    
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://kingsingledog.github.io/post/git-chang-yong-ming-ling/">
-                                                                git常用命令
-                                                            </a>
-                                                            <span class="publish-time"> - <i class="fa fa-calendar"aria-hidden="true"></i> 2020-04-08</span></article>
-                                                        
-                                                            
-                                                    
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://kingsingledog.github.io/post/yan-han/">
-                                                                言函
-                                                            </a>
-                                                            <span class="publish-time"> - <i class="fa fa-calendar"aria-hidden="true"></i> 2020-04-05</span></article>
-                                                        
-                                                            
-                                                    
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://kingsingledog.github.io/post/qiao-jian-dan-de-zheng-ze-biao-da-shi-jiao-cheng/">
-                                                                敲简单的正则表达式教程
-                                                            </a>
-                                                            <span class="publish-time"> - <i class="fa fa-calendar"aria-hidden="true"></i> 2020-04-02</span></article>
-                                                        
-                                                            
-                                                    
-                                                        <article class="archive-item">
-                                                            <a class="archive-item-link" href="https://kingsingledog.github.io/post/za-han/">
-                                                                杂函
-                                                            </a>
-                                                            <span class="publish-time"> - <i class="fa fa-calendar"aria-hidden="true"></i> 2020-04-02</span></article>
-                                                        
-                                                            
-                                                                
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post-footer">
-                                
-                                        <span style="display: inline-block;width: 50%;text-align: center;border-right: 1px solid#e3e8e8;font-size: 14px;float: left;"><i class="icon-arrow-ios-back-outline"></i> </span>
-                                        
-                                            
-                            </div>
-                        </article>
-                    </li>
-                </ul>
-            </div>
-            <div id="sidebar">
-    <ul>
-        
-            <li class="lite-item">
-                <header class="lite-item-header">
-                    <h3 class="sidebar-default-icon lite-item-title"><i class="Card Card-hitokoto"></i>&nbsp;&#x4E00;&#x8A00;</h3>
-                </header>
-                <div class="textwidget">
-                    <p>
-                        <b id="hitokoto"></b>
-                    </p>
-                </div>
-            </li>
-            
-                <!--
-                <li class="lite-item">
-                    <header class="lite-item-header">
-                        <h3 class="sidebar-default-icon lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
-                    </header>
-                    <div class="textwidget">
-                        
-                            <a href="" class="tag-cloud-link " style="font-size: 12px;margin: 5px; padding: 2px;">
-                                <i class="fa fa-tags" aria-hidden="true"></i>
-                            </a>
-                            
-                    </div>
-                </li>-->
-                <li class="lite-item">
-                    <header class="lite-item-header">
-                        <h3 class="sidebar-default-icon lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
-                    </header>
-                    <div class="textwidget">
-                        <div id='tags' style="height: auto;width: 360;"></div>
-                        <script src="https://kingsingledog.github.io//media/js/svg3dtagcloud.min.js"></script>
-                        <script>
-                            $(document).ready(function() {
-                                var entries = ([
-                                    
-                                     {
-                                        label: '🏷Node.js',
-                                        url: 'https://kingsingledog.github.io/tag/wGGGY_QqB/',
-                                        target: '_button'
-                                    },
-                                    
-                                    
-                                     {
-                                        label: '🏷微信',
-                                        url: 'https://kingsingledog.github.io/tag/-qFZQx_Pf/',
-                                        target: '_button'
-                                    },
-                                    
-                                    
-                                     {
-                                        label: '🏷自动化',
-                                        url: 'https://kingsingledog.github.io/tag/MJwHwUwwcc/',
-                                        target: '_button'
-                                    },
-                                    
-                                    
-                                     {
-                                        label: '🏷教程',
-                                        url: 'https://kingsingledog.github.io/tag/NfG2-3M0yA/',
-                                        target: '_button'
-                                    },
-                                    
-                                    
-                                     {
-                                        label: '🏷笔记',
-                                        url: 'https://kingsingledog.github.io/tag/JIqSdGjYH/',
-                                        target: '_button'
-                                    },
-                                    
-                                    
-                                     {
-                                        label: '🏷工具',
-                                        url: 'https://kingsingledog.github.io/tag/V_XX7a4vr/',
-                                        target: '_button'
-                                    }
-                                    
-                                    
-                                ]);
-                                var settings = {
-                                    entries: entries, //数据
-                                    width: 300, //宽度
-                                    height: 300, //高度
-                                    radius: '5%',
-                                    radiusMin: 75,
-                                    bgDraw: true, //是否显示背景
-                                    bgColor: '#fff', //背景颜色
-                                    opacityOver: 1.00,
-                                    opacityOut: 0.05,
-                                    opacitySpeed: 6,
-                                    fov: 360,
-                                    speed: 0.3, //旋转的速度
-                                    fontFamily: 'Oswald, Arial, sans-serif',
-                                    fontSize: '18', //默认字体大小
-                                    fontColor: '#666', //默认字体颜色
-                                    fontWeight: 'normal', //bold
-                                    fontStyle: 'normal', //italic 
-                                    fontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
-                                    fontToUpperCase: true,
-                                    tooltipFontFamily: 'Oswald, Arial, sans-serif',
-                                    tooltipFontSize: '16',
-                                    tooltipFontColor: 'red',
-                                    tooltipFontWeight: 'normal', //bold
-                                    tooltipFontStyle: 'normal', //italic 
-                                    tooltipFontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
-                                    tooltipFontToUpperCase: false,
-                                    tooltipTextAnchor: 'left',
-                                    tooltipDiffX: 0,
-                                    tooltipDiffY: 5
-
-                                };
-
-                                //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
-                                $('#tags').svg3DTagCloud(settings);
-                            });
-                        </script>
-                    </div>
-                </li>
-                
-                    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/APlayer.min.js"></script>
-                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
-                    <div id="player"></div>
-                    
-                        <li class="lite-item">
-                            <header class="lite-item-header">
-                                <h3 class="sidebar-default-icon lite-item-title">
-                                    &#x1F3B5;&#x97F3;&#x4E50;
-                                </h3>
-                            </header>
-                            <div class="textwidget">
-                                <p>
-                                    <div id="player_box"></div>
-                                </p>
-                            </div>
-                        </li>
-                        
-                            <script>
-                                function LoadPlayer() {
-                                    var music_array = [];
-                                    
-                                    music_array.push({
-                                        name: '失波 (Lost Frequencis)',
-                                        url: 'http://music.163.com/song/media/outer/url?id=426342468.mp3',
-                                        artist: 'R7CKY',
-                                        cover: 'http://p1.music.126.net/STfhMRMhE0exGT4Mm8dSYg==/18258490091275454.jpg?imageView&amp;thumbnail=360y360&amp;quality=75&amp;tostatic=0',
-                                    });
-                                    
-                                    music_array.push({
-                                        name: 'with you',
-                                        url: 'http://music.163.com/song/media/outer/url?id=1427925579.mp3',
-                                        artist: '木子',
-                                        cover: 'http://p2.music.126.net/SZ3gEsCE30qQq-aoIY7gSA==/109951164764694280.jpg?imageView&amp;thumbnail=360y360&amp;quality=75&amp;tostatic=0',
-                                    });
-                                    
-                                    music_array.push({
-                                        name: 'Ephemeral Memories',
-                                        url: 'http://music.163.com/song/media/outer/url?id=554308724.mp3',
-                                        artist: 'MoreanP',
-                                        cover: 'https://p1.music.126.net/1dKSOHUP0iHPQ5bCIkZOpw==/109951163256736819.jpg?param=130y130',
-                                    });
-                                    
-                                    
-                                    const ap = new APlayer({
-                                        container: document.getElementById('player_box'),
-                                        audio: music_array
-                                    });
-                                    
-                                }
-                                LoadPlayer();
-                            </script>
-                            
-                                
-                                        
-                                            
-                                                
-                                                    <li class="lite-item">
-                                                        <header class="lite-item-header">
-                                                            <h3 class="sidebar-default-icon lite-item-title">
-                                                                ⛅天气
-                                                            </h3>
-                                                        </header>
-                                                        <div class="textwidget">
-                                                            <div id="textwidget-box" style="width:100%; height:auto;">
-                                                                <div id="tp-weather-widget"></div>   <script>     (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));     window.SeniverseWeatherWidget('show', {       flavor: "slim",       location: "WX4FBXXFKE4F",       geolocation: true,       language: "zh-Hans",       unit: "c",       theme: "auto",       token: "679a7587-dbef-4bec-954a-d5c388d7800f",       hover: "enabled",       container: "tp-weather-widget"     })   </script><br/><a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=TD8kKSAgIzsjPiAoDD09Yi8jIQ" style="text-decoration:none;"><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_01.png"/></a>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    
-                                                    <li class="lite-item">
-                                                        <header class="lite-item-header">
-                                                            <h3 class="sidebar-default-icon lite-item-title">
-                                                                🛠工具
-                                                            </h3>
-                                                        </header>
-                                                        <div class="textwidget">
-                                                            <div id="textwidget-box" style="width:100%; height:auto;">
-                                                                <a href="https://www.ppzhilian.com/">PPLink</a>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    
-                                                        
-                                                            <li class="lite-item">
-                                                                <header class="lite-item-header">
-                                                                    <h3 class="sidebar-default-icon lite-item-title">&#x1F468;&#x200D;&#x1F4BB;&#x53CB;&#x94FE;</h3>
-                                                                </header>
-                                                                <div class="textwidget">
-                                                                    
-                                                                        
-                                                                            <p onclick="javascript:top.location='https://blog.itjoker.cn'"><span class="link_a"><a href="https://blog.itjoker.cn" alt="ITJoker ">ITJoker -ITJoker&#39;s Blog</a></span></p>
-
-                                                                            
-                                                                            <p onclick="javascript:top.location='https://bol-boom.github.io/'"><span class="link_a"><a href="https://bol-boom.github.io/" alt="菠萝 ">菠萝 -集才华与美貌于一身的灵魂程序员</a></span></p>
-
-                                                                            
-                                                                                
-                                                                </div>
-                                                            </li>
-    </ul>
-</div>
         </div>
-
-</body>
-<footer id="foot">
-    <a id="back-to-top" href="#"><i class="Card Card-top"></i></a>
-    <div class="copyright">
-        <div class="text-gray-400 font-light my-8 md:my-0">Made with ❤️ by <a href="https://github.com/KingSingleDog" target="_blank" class="text-gray-800 font-normal">Shello</a></div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
             
+                <div class="nav-item">
                     
+                        <a href="/" class="menu gt-a-link">
+                            🎈首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            📕归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            🏷标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            🙍‍♂️关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+    </div>
+</nav>
 
-                        <div style="font-size:12px">
-                            
-                                        已经建站 <b id='build_time'></b>
+        
+
+<div class="archives-container">
+    
+        <h2 class="year gt-c-cotent-color-first">2020</h2>
+        
+            
+                <article class="post">
+                    <a href="https://kingsingledog.github.io/post/xin-qing-sui-bi/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-05-14&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            心情随笔
                         </div>
-                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/time.min.js"></script>
-                        <script>
-                            setInterval(show_date_time, 1000, '2020-1-1');
-                        </script>
-                        
-                            &#x7248;&#x6743;&#x6240;&#x6709; &copy;
-                            <span class="my-face"><script>
-                        var date = new Date();
-                        document.write("" + date.getFullYear());
-                    </script>
-                   </span>
-                            <a href="https://kingsingledog.github.io/">
-                                楸
-                            </a>&nbsp;|&nbsp;Powered by
-                            <a href="https://github.com/" target="_blank">
-                                Github
-                            </a>
-    </div>
-    <div id='UpdateTime' style='display:none'>
-        1590901110658
-    </div>
-    <script>
-        var titleTime;
-        document.addEventListener("visibilitychange", function() {
-            document.hidden ? (document.title = "\uD83D\uDE25" + OriginTitile, clearTimeout(titleTime)) : (document.title = "\uD83D\uDE1D" + OriginTitile, titleTime = setTimeout(function() {
-                document.title = OriginTitile
-            }, 2E3))
-        });
-        var OriginTitile = document.title;
+                    </a>
+                </article>
+            
         
-        App.hitokoto();
+            
+                <article class="post">
+                    <a href="https://kingsingledog.github.io/post/an-zhuang-nodejs/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-04-22&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            安装 Node.js
+                        </div>
+                    </a>
+                </article>
+            
         
-        App.clearLog();
-        App.outputlog();
-        var logo = '%c楸\'%cBlog';
-        console.info(
-            logo,
-            'color: #ffffff; background: #000000; padding:5px 10px 5px 10px;font-size:40px;border-radius:12px 0 0 12px;', 'color: #000000; background: #FE9A00; padding:5px 10px;font-size:40px;border-radius:0 12px 12px 0;'
-        );
-    </script>
-</footer>
+            
+                <article class="post">
+                    <a href="https://kingsingledog.github.io/post/python3-shi-xian-fan-yi/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-04-17&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            Python 翻译文本
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+                <article class="post">
+                    <a href="https://kingsingledog.github.io/post/shi-yong-wechaty-lai-gou-jian-wei-xin-ji-qi-ren/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-04-10&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            使用 wechaty 来构建微信机器人
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+                <article class="post">
+                    <a href="https://kingsingledog.github.io/post/git-chang-yong-ming-ling/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-04-08&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            git常用命令
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+                <article class="post">
+                    <a href="https://kingsingledog.github.io/post/yan-han/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-04-05&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            言函
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+                <article class="post">
+                    <a href="https://kingsingledog.github.io/post/qiao-jian-dan-de-zheng-ze-biao-da-shi-jiao-cheng/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-04-02&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            敲简单的正则表达式教程
+                        </div>
+                    </a>
+                </article>
+            
+        
+            
+                <article class="post">
+                    <a href="https://kingsingledog.github.io/post/za-han/">
+                        <div class="post-title gt-c-content-color-first">
+                            <small><b>2020-04-02&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
+                            杂函
+                        </div>
+                    </a>
+                </article>
+            
+        
+    
+</div>
 
+        <div class="pagination-container">
+    
+    
+</div>
+
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">有些事情，现在不做，一辈子都不会再做了。</div>
+    <div class="social-container">
+        
+            
+                <a href="https://github.com/KingSingleDog" target="_blank">
+                    <i class="fab fa-github gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+                <a href="https://weibo.com/u/5737694982/home" target="_blank">
+                    <i class="fab fa-weibo gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+                <a href="https://www.zhihu.com/people/wan-shi-bu-gong-51-41" target="_blank">
+                    <i class="fab fa-zhihu gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        <div class="text-gray-400 font-light my-8 md:my-0">Made with ❤️ by <a href="https://github.com/KingSingleDog" target="_blank" class="text-gray-800 font-normal">Shello</a></div>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://kingsingledog.github.io//atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+    hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
 </html>
