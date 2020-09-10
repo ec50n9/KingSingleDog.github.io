@@ -1,363 +1,153 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8"/>
-<meta name="description" content=""/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>楸</title>
-<link rel="shortcut icon" href="https://kingsingledog.github.io//favicon.ico?v=1590902337684">
-<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
-<link rel="stylesheet" href="https://kingsingledog.github.io//styles/main.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/go.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-
-<!-- DEMO JS -->
-<!--<script src="media/scripts/index.js"></script>-->
-
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>西洲</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <!-- main.js在文件末尾加载，因为要初始化数据才能使用vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/iconfont_emoji.js"></script>
 </head>
+
 <body>
-<div class="main gt-bg-theme-color-first">
-    <div class="main-content">
-        <nav class="navbar navbar-expand-lg">
-    <div class="navbar-brand">
-        <img class="user-avatar" src="/images/avatar.png" alt="头像">
-        <div class="site-name gt-c-content-color-first">
-            楸
+    <div class="header">
+        <h1 v-bind:title="message">西洲</h1>
+        <p>南风知我意，吹梦到西洲。</p>
+        <ul class="nav_menu">
+            <li class="nav_item">
+                <a href="#">关于</a>
+            </li>
+            <li class="nav_item">
+                <a href="#">小谭</a>
+            </li>
+            <li class="nav_item">
+                <a href="#">伊甸园</a>
+            </li>
+            <li class="nav_item">
+                <a href="#">苹果树</a>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="leftcolumn">
+            <div class="card">
+                <h2>About us</h2>
+                <p>
+                    <div id="hello" class="review">
+                        一个在亚热带季风气候中生长的伪文艺青年和一个漂亮全能的<span class="pink_text">重庆可爱精</span>于二九年华的相遇~
+                    </div>
+                </p>
+                <button type="button" id="btn_a">测试</button>
+            </div>
+            <div class="card">
+                <h2>课程表</h2>
+                <table border="1">
+                    <tr>
+                        <th>时间</th>
+                        <th>星期一</th>
+                        <th>星期二</th>
+                        <th>星期三</th>
+                        <th>星期四</th>
+                        <th>星期五</th>
+                    </tr>
+                    <tr>
+                        <th>8:40-10:20</th>
+                        <th>学前教育史</th>
+                        <th>学前儿童教育学</th>
+                        <th>美术与幼儿美术创作2</th>
+                        <th>无</th>
+                        <th>幼儿绘本与创编指导</th>
+                    </tr>
+                    <tr>
+                        <th>10:35-12:15</th>
+                        <th>无</th>
+                        <th>钢琴与幼儿歌曲弹唱2</th>
+                        <th>营养保健与疾病预防</th>
+                        <th>幼儿英语教学活动设计与指导</th>
+                        <th>无</th>
+                    </tr>
+                    <tr>
+                        <th>14:30-16:10</th>
+                        <th>幼儿文学</th>
+                        <th>大学体育3</th>
+                        <th>无</th>
+                        <th>无</th>
+                        <th>幼儿园课程</th>
+                    </tr>
+                    <tr>
+                        <th>16:25-18:05</th>
+                        <th>幼儿园教育活动设计与指导</th>
+                        <th>无</th>
+                        <th>无</th>
+                        <th>无</th>
+                        <th>无</th>
+                    </tr>
+                    <tr>
+                        <th>19:00-20:40</th>
+                        <th>无</th>
+                        <th>无</th>
+                        <th>创新创业教育</th>
+                        <th>舞蹈与幼儿舞蹈创编2</th>
+                        <th>无</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-a"></use>
+                    </svg>Today
+                </h2>
+                <p id="today_date">
+                    {{ message }}
+                </p>
+                <p>宜，想小谭</p>
+            </div>
+            <div class="card">
+                <h2>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-feiwen"></use>
+                    </svg>Love log
+                </h2>
+                <p>
+                    <ul class="nav_menu">
+                        <li>
+                            <p>
+                                2019 . 08 . 13 · 认识小谭
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                2020 . 07 . 08 · 被小谭骗到手
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                2020 . 07 . 25 · 小谭的十九岁生日
+                            </p>
+                        </li>
+                    </ul>
+                </p>
+            </div>
         </div>
     </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="navbar-nav mr-auto" style="text-align: center">
-            
-                <div class="nav-item">
-                    
-                        <a href="/" class="menu gt-a-link">
-                            🎈首页
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="/archives" class="menu gt-a-link">
-                            📕归档
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="/tags" class="menu gt-a-link">
-                            🏷标签
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="/post/about" class="menu gt-a-link">
-                            🙍‍♂️关于
-                        </a>
-                    
-                </div>
-            
-        </div>
+    <div class="footer">
+        <p>
+            我们已经在一起 61 天了
+        </p>
+        <p>
+            Make with
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-aixin1"></use>
+            </svg>
+            by Shello.
+        </p>
     </div>
-</nav>
-
-        <div class="post-list-container">
-    <div class="post-inner">
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://kingsingledog.github.io/post/xin-qing-sui-bi/">
-                            <span class="post-title gt-c-content-color-first">心情随笔</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-05-14 ·
-                        </time>
-                        
-                    </div>
-                </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://kingsingledog.github.io/post/an-zhuang-nodejs/">
-                            <span class="post-title gt-c-content-color-first">安装 Node.js</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p>🚗 从这里开始你的 Node.js 之旅！</p>
-
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-04-22 ·
-                        </time>
-                        
-                            <a href="https://kingsingledog.github.io/tag/wGGGY_QqB/" class="post-tag">
-                                # Node.js
-                            </a>
-                        
-                    </div>
-                </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://kingsingledog.github.io/post/python3-shi-xian-fan-yi/">
-                            <span class="post-title gt-c-content-color-first">Python 翻译文本</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p>🐍 Python 翻译文本的几种方案</p>
-
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-04-17 ·
-                        </time>
-                        
-                    </div>
-                </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://kingsingledog.github.io/post/shi-yong-wechaty-lai-gou-jian-wei-xin-ji-qi-ren/">
-                            <span class="post-title gt-c-content-color-first">使用 wechaty 来构建微信机器人</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p>🤖 你的下一个女友，何必是“女”友</p>
-
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-04-10 ·
-                        </time>
-                        
-                            <a href="https://kingsingledog.github.io/tag/-qFZQx_Pf/" class="post-tag">
-                                # 微信
-                            </a>
-                        
-                            <a href="https://kingsingledog.github.io/tag/MJwHwUwwcc/" class="post-tag">
-                                # 自动化
-                            </a>
-                        
-                            <a href="https://kingsingledog.github.io/tag/NfG2-3M0yA/" class="post-tag">
-                                # 教程
-                            </a>
-                        
-                    </div>
-                </div>
-                
-                    <a href="https://kingsingledog.github.io/post/shi-yong-wechaty-lai-gou-jian-wei-xin-ji-qi-ren/" class="post-feature-image"
-                       style="background-image: url('https://kingsingledog.github.io//post-images/shi-yong-wechaty-lai-gou-jian-wei-xin-ji-qi-ren.jpg')">
-                    </a>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://kingsingledog.github.io/post/git-chang-yong-ming-ling/">
-                            <span class="post-title gt-c-content-color-first">git常用命令</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p>👾 git常用到的命令</p>
-
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-04-08 ·
-                        </time>
-                        
-                            <a href="https://kingsingledog.github.io/tag/JIqSdGjYH/" class="post-tag">
-                                # 笔记
-                            </a>
-                        
-                    </div>
-                </div>
-                
-                    <a href="https://kingsingledog.github.io/post/git-chang-yong-ming-ling/" class="post-feature-image"
-                       style="background-image: url('https://kingsingledog.github.io//post-images/git-chang-yong-ming-ling.jpeg')">
-                    </a>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://kingsingledog.github.io/post/yan-han/">
-                            <span class="post-title gt-c-content-color-first">言函</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p>🙇 汇集喜欢的名言</p>
-
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-04-05 ·
-                        </time>
-                        
-                            <a href="https://kingsingledog.github.io/tag/JIqSdGjYH/" class="post-tag">
-                                # 笔记
-                            </a>
-                        
-                    </div>
-                </div>
-                
-                    <a href="https://kingsingledog.github.io/post/yan-han/" class="post-feature-image"
-                       style="background-image: url('https://kingsingledog.github.io//post-images/yan-han.jpg')">
-                    </a>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://kingsingledog.github.io/post/qiao-jian-dan-de-zheng-ze-biao-da-shi-jiao-cheng/">
-                            <span class="post-title gt-c-content-color-first">敲简单的正则表达式教程</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p>🤡 这是一篇敲简单的正则表达式教程哇</p>
-
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-04-02 ·
-                        </time>
-                        
-                            <a href="https://kingsingledog.github.io/tag/V_XX7a4vr/" class="post-tag">
-                                # 工具
-                            </a>
-                        
-                            <a href="https://kingsingledog.github.io/tag/NfG2-3M0yA/" class="post-tag">
-                                # 教程
-                            </a>
-                        
-                    </div>
-                </div>
-                
-                    <a href="https://kingsingledog.github.io/post/qiao-jian-dan-de-zheng-ze-biao-da-shi-jiao-cheng/" class="post-feature-image"
-                       style="background-image: url('https://kingsingledog.github.io//post-images/qiao-jian-dan-de-zheng-ze-biao-da-shi-jiao-cheng.jpeg')">
-                    </a>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://kingsingledog.github.io/post/za-han/">
-                            <span class="post-title gt-c-content-color-first">杂函</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p>📝 一些乱七八糟的笔记</p>
-
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-04-02 ·
-                        </time>
-                        
-                            <a href="https://kingsingledog.github.io/tag/JIqSdGjYH/" class="post-tag">
-                                # 笔记
-                            </a>
-                        
-                    </div>
-                </div>
-                
-                    <a href="https://kingsingledog.github.io/post/za-han/" class="post-feature-image"
-                       style="background-image: url('https://kingsingledog.github.io//post-images/za-han.jpg')">
-                    </a>
-                
-            </div>
-        
-    </div>
-</div>
-
-        <div class="pagination-container">
-    
-    
-</div>
-
-
-        <div class="site-footer gt-c-content-color-first">
-    <div class="slogan gt-c-content-color-first">有些事情，现在不做，一辈子都不会再做了。</div>
-    <div class="social-container">
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-    </div>
-    <div class="footer-info">
-        <div class="text-gray-400 font-light my-8 md:my-0">Made with ❤️ by <a href="https://github.com/KingSingleDog" target="_blank" class="text-gray-800 font-normal">Shello</a></div>
-    </div>
-    <div>
-        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
-                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://kingsingledog.github.io//atom.xml" target="_blank">RSS</a></a>
-    </div>
-</div>
-
-<script>
-    hljs.initHighlightingOnLoad()
-</script>
-
-    </div>
-</div>
 </body>
+<script src="js/main.js"></script>
+
 </html>

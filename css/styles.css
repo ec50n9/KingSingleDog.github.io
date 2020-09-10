@@ -1,0 +1,192 @@
+/*添加英文字体*/
+@font-face {
+    font-family: 'Suisse Int';
+    src: url('../font/SuisseIntl-Regular-WebXL.woff2') format('woff2');
+}
+
+/*iconfont*/
+.icon {
+    width: 1em;
+    height: 1em;
+    margin-right: 0.2em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+/*全部*/
+* {
+    box-sizing: border-box;
+}
+
+/*全局*/
+body {
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Suisse Int', Helvetica, Arial, sans-serif;
+    background: #f1f1f1;
+    margin-top: 0;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+h1 {
+    line-height: 1.75;
+    font-weight: 500;
+}
+
+h2 {
+    line-height: 1.75;
+    font-weight: 400;
+}
+
+p {
+    margin: 0.5em 0;
+    line-height: 2;
+    color: rgba(0, 0, 0, .6);
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    font-size: 1em;
+}
+
+/* 超链接的动画 */
+a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background: rgb(0, 0, 0);
+    transition: all .3s;
+}
+
+/* 超链接的动画 */
+a:hover::after {
+    width: 100%;
+    right: 0;
+}
+
+/* 导航栏中的链接无下划线 */
+.nav_item a {
+    font-size: 1em;
+}
+
+/* 文章中的链接有灰色下划线 */
+.content a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background: rgb(232, 230, 227);
+}
+
+/*标题栏*/
+.header {
+    margin-top: 0.5em;
+    margin-bottom: 1.2em;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+/*正文*/
+.content {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+/*列布局*/
+.content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*左列*/
+.leftcolumn {
+    float: left;
+    width: 75%;
+    padding-right: 2em;
+}
+
+/*右侧栏*/
+.rightcolumn {
+    float: left;
+    width: 25%;
+}
+
+/* 响应式布局 - 屏幕尺寸小于 800px 时，两列布局改为上下布局 */
+@media screen and (max-width: 800px) {
+
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* 文章卡片效果 */
+.card {
+    border-radius: 2em;
+    background-color: white;
+    box-shadow: 0em 0.2em 0.2em #00000011;
+    padding: 2em;
+    margin-top: 2em;
+}
+
+/*底部栏*/
+.footer {
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+/*导航菜单*/
+.nav_menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/*导航菜单项*/
+.nav_item {
+    float: right;
+    margin-bottom: 0.4em;
+    margin-right: 1em;
+}
+
+/*引用*/
+.review {
+    position: relative;
+    max-width: 100%;
+    margin-bottom: 48px;
+    font-size: 20px;
+    line-height: 1.75;
+}
+
+/*引用的左双引号*/
+.review::before {
+    display: block;
+    position: absolute;
+    left: -.6em;
+    content: "\201C";
+}
+
+/*引用的右双引号*/
+.review:after {
+    display: inline-block;
+    position: absolute;
+    content: "\201D";
+}
+
+/*粉色字*/
+.pink_text {
+    color: hotpink;
+}
