@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <!-- main.js在文件末尾加载，因为要初始化数据才能使用vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/iconfont_emoji.js"></script>
 </head>
 
@@ -96,16 +97,16 @@
             </div>
         </div>
         <div class="rightcolumn">
-            <div class="card">
+            <div class="card" id="card_date">
                 <h2>
                     <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-a"></use>
                     </svg>Today
                 </h2>
-                <p id="today_date">
-                    {{ message }}
-                </p>
-                <p>宜，想小谭</p>
+                <p>{{ date }}</p>
+                <p>{{weather_tongliang}}</p>
+                <p>{{weather_xinyi}}</p>
+                <p>宜：想小谭</p>
             </div>
             <div class="card">
                 <h2>
@@ -137,14 +138,14 @@
     </div>
     <div class="footer">
         <p id="love_date" v-bind:title="title">
-            我们已经在一起 {{message}} 了
+            咱已经一起度过了 {{message}}
         </p>
         <p>
             Make with
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-aixin1"></use>
             </svg>
-            by Shello.
+            by<span class="shake">Shello</span>
         </p>
     </div>
 </body>

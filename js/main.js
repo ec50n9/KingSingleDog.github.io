@@ -1,26 +1,40 @@
 var date_confession = new Date('2020/07/08 20:31')
 var date_now, total, day, hour, min, sec
-console.log('hello')
 
-var date = new Vue({
-  el: '#today_date',
+var date = new Date()
+
+var card_date = new Vue({
+  el: '#card_date',
   data: {
-    message: '星期' + '日一二三四五六'.charAt(new Date().getDay()) + "，阴"
+    date: date.getMonth() + ' 月 ' + date.getDay() + ' 日 ' + '，星期' + '日一二三四五六'.charAt(date.getDay()),
+    weather_tongliang: '正在获取铜梁区天气...',
+    weather_xinyi: '正在获取信宜市天气...'
   }
 })
 
-var title = new Vue({
-  el: '.header',
-  data: {
-    message: '页面加载于 ' + new Date().toLocaleString()
-  }
-})
+axios.get('https://v0.yiketianqi.com/api?version=v61&appid=77455165&appsecret=8z4CwkqM&cityid=101042800')
+  .then(res => {
+    var weather_tongliang = res.data
+    card_date.weather_tongliang = '铜梁区：' + weather_tongliang.win + '，' + weather_tongliang.wea + '，' + weather_tongliang.tem + ' ℃'
+  })
+  .catch(err => {
+    console.log('获取天气发生错误: ' + err)
+  })
+
+axios.get('https://v0.yiketianqi.com/api?version=v61&appid=77455165&appsecret=8z4CwkqM&cityid=101282005')
+  .then(res => {
+    var weather_xinyi = res.data
+    card_date.weather_xinyi = '信宜市：' + weather_xinyi.win + '，' + weather_xinyi.wea + '，' + weather_xinyi.tem + ' ℃'
+  })
+  .catch(err => {
+    console.log('获取天气发生错误: ' + err)
+  })
 
 var loveDate = new Vue({
   el: '#love_date',
   data: {
     title: '页面加载于 ' + new Date().toLocaleString(),
-    message: "goout",
+    message: "",
   }
 })
 
@@ -31,5 +45,5 @@ setInterval(() => {
   hour = parseInt((total - day * 60 * 60 * 24) / (60 * 60))
   min = parseInt((total - day * 60 * 60 * 24 - hour * 60 * 60) / (60))
   sec = parseInt(total - day * 60 * 60 * 24 - hour * 60 * 60 - min * 60)
-  loveDate.message = day + '天' + hour + '小时' + min + '分钟' + sec + '秒'
+  loveDate.message = day + ' 天 ' + hour + ' 小时 ' + min + ' 分钟 ' + sec + ' 秒'
 })
