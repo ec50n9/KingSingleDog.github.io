@@ -1,5 +1,6 @@
 var date_confession = new Date('2020/07/08 20:31')
 var date_now, total, day, hour, min, sec
+console.log('hello')
 
 var date = new Vue({
   el: '#today_date',
