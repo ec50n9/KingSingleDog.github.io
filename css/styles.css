@@ -14,6 +14,18 @@
     overflow: hidden;
 }
 
+.div2 {
+    width: 0px;
+    height: 0px;
+    text-align: center;
+    border-top: 200px solid transparent;
+    border-bottom: 200px solid green;
+    border-right: 200px solid transparent;
+    border-left: 200px solid transparent;
+    position: absolute;
+    margin: 250px 800px
+}
+
 /*全部*/
 * {
     box-sizing: border-box;
