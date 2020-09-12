@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>西洲</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/class.css">
     <!-- main.js在文件末尾加载，因为要初始化数据才能使用vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -40,7 +41,7 @@
                         一个在亚热带季风气候中生长的伪文艺青年和一个漂亮全能的<span class="pink_text">重庆可爱精</span>于二九年华的相遇~
                     </div>
                 </p>
-                <button type="button" id="btn_a">测试</button>
+                <a href="./gallery.html">画廊</a>
             </div>
             <div class="card">
                 <h2>课程表</h2>
@@ -138,7 +139,7 @@
     </div>
     <div class="footer">
         <p id="love_date" v-bind:title="title">
-            咱已经一起度过了 {{message}}
+            相恋已 {{message}}
         </p>
         <p>
             Make with

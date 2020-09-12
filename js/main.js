@@ -3,6 +3,7 @@ var date_now, total, day, hour, min, sec
 
 var date = new Date()
 
+// 配置today卡片
 var card_date = new Vue({
   el: '#card_date',
   data: {
@@ -12,6 +13,7 @@ var card_date = new Vue({
   }
 })
 
+// 获取铜梁区天气
 axios.get('https://v0.yiketianqi.com/api?version=v61&appid=77455165&appsecret=8z4CwkqM&cityid=101042800')
   .then(res => {
     var weather_tongliang = res.data
@@ -21,6 +23,7 @@ axios.get('https://v0.yiketianqi.com/api?version=v61&appid=77455165&appsecret=8z
     console.log('获取天气发生错误: ' + err)
   })
 
+// 获取信宜市天气
 axios.get('https://v0.yiketianqi.com/api?version=v61&appid=77455165&appsecret=8z4CwkqM&cityid=101282005')
   .then(res => {
     var weather_xinyi = res.data
@@ -30,6 +33,7 @@ axios.get('https://v0.yiketianqi.com/api?version=v61&appid=77455165&appsecret=8z
     console.log('获取天气发生错误: ' + err)
   })
 
+// 底部时间
 var loveDate = new Vue({
   el: '#love_date',
   data: {
@@ -38,6 +42,7 @@ var loveDate = new Vue({
   }
 })
 
+// 每秒更新底部时间
 setInterval(() => {
   date_now = new Date()
   total = (date_now.getTime() - date_confession.getTime()) / 1000

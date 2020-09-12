@@ -1,0 +1,55 @@
+.big_img_left{
+    width: 100%;
+    height: 30em;
+    padding: 1em;
+}
+
+.big_img_left img{
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img_detial{
+    width: 50%;
+    height: auto;
+    max-height: 20em;
+    overflow: auto;
+    border-radius: 2em;
+    background-color: white;
+    box-shadow: 0em 0.2em 0.2em #00000011;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.big_img_left .img_detial{
+    position: relative;
+    top: -25em;
+    left: 50%;
+}
+
+.img_year{
+    font-size: 3em;
+    font-weight: bold;
+    color: #000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.img_day{
+    font-size: 1em;
+    color: #bebebe;
+    font-family: "微软雅黑",microsoft yahei;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.img_title{
+    font-size: 1.5em;
+    color: rgba(0, 0, 0, 0.856);
+    font-weight: bold;
+    line-height: 1.4;
+    overflow: hidden;
+    margin-bottom: 0.3em;
+}
